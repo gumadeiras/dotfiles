@@ -1,9 +1,9 @@
 # hey, dotfiles
 dotfiles and some other stuff
 
-.todo:
-- setup python env
-- setup deep learning env
+. todo:
+- setup python env (currently macports)
+- setup deep learning env (move to pip)
 
 . usage:
 ```sh
