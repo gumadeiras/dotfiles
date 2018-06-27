@@ -1,10 +1,13 @@
 *~
 
-# scm revert files
-**.orig
-
 # macOS finder artifacts
 .DS_Store
+
+# sublime workspace
+*.sublime*
+
+# scm revert files
+**.orig
 
 # RubyMine project files
 .idea
