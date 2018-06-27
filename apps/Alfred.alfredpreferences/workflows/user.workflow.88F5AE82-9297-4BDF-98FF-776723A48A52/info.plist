@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>tylereich.blur</string>
+	<key>connections</key>
+	<dict>
+		<key>AA64A77C-7292-4407-942E-BB27D3BEDF73</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9BE81C7-F04A-42A2-BDEC-A032BDC8129A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E9BE81C7-F04A-42A2-BDEC-A032BDC8129A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1F033514-D84B-4CF1-AB6A-58B4A03773A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tyler Eich</string>
+	<key>description</key>
+	<string>Set Alfred's blur radius</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Blur</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>blur</string>
+				<key>runningsubtext</key>
+				<string>Loading current blur data…</string>
+				<key>script</key>
+				<string>python blur.py "{query}"</string>
+				<key>title</key>
+				<string>Blur Alfred's background</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>AA64A77C-7292-4407-942E-BB27D3BEDF73</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python blurAction.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E9BE81C7-F04A-42A2-BDEC-A032BDC8129A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alfred Background Blur</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1F033514-D84B-4CF1-AB6A-58B4A03773A9</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1F033514-D84B-4CF1-AB6A-58B4A03773A9</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>AA64A77C-7292-4407-942E-BB27D3BEDF73</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>E9BE81C7-F04A-42A2-BDEC-A032BDC8129A</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

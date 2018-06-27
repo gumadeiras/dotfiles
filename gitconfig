@@ -1,0 +1,49 @@
+[user]
+    name = Gustavo Madeira Santana
+    email = gumadeiras@gmail.com
+[core]
+    excludesfile = /Users/gumadeiras/.gitignore_global
+    autocrlf = input
+    eol = lf
+    pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+    au = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+[push]
+  default = tracking
+[alias]
+    s = status
+    co = checkout
+    cc = commit
+    ca = commit --amend
+    cp = cherry-pick
+    aa = add -u
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+    ndiff = --no-pager diff
+    ls = log --color --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit --decorate --numstat
+    who = shortlog -n -s --no-merges
+
+    count = "!f() { compareBranch=${1-master}; git rev-list --count HEAD ^$compareBranch; }; f"
+    squashbase = "!f() { branchName=${1-master}; commitCount=$(git count $branchName); git rebase -i HEAD~$commitCount; }; f"
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[github]
+    user = gumadeiras
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

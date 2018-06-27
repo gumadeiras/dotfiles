@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mondpirat.ot</string>
+	<key>connections</key>
+	<dict>
+		<key>A94981D1-F800-4F3B-987E-88E43006A497</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BBA531D9-6E32-4CE6-85E9-EF806C738808</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>651F0FB6-B015-44FD-9BA4-C43830533285</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Search on duden.de</string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andreas Widmer</string>
+	<key>description</key>
+	<string>Search on openthesaurus.de</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>openthesaurus</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>ot</string>
+				<key>runningsubtext</key>
+				<string>loading ...</string>
+				<key>script</key>
+				<string>require_once 'openthesaurus.php';
+ot('{query}');</string>
+				<key>subtext</key>
+				<string>for german synonymic words</string>
+				<key>title</key>
+				<string>Search on openthesaurus.de ...</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A94981D1-F800-4F3B-987E-88E43006A497</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>BBA531D9-6E32-4CE6-85E9-EF806C738808</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<true/>
+				<key>url</key>
+				<string>http://www.duden.de/suchen/dudenonline/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>651F0FB6-B015-44FD-9BA4-C43830533285</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>651F0FB6-B015-44FD-9BA4-C43830533285</key>
+		<dict>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
+		<key>A94981D1-F800-4F3B-987E-88E43006A497</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>BBA531D9-6E32-4CE6-85E9-EF806C738808</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>www.mondpirat.com</string>
+</dict>
+</plist>

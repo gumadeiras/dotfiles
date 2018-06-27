@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfred.screensharing.bundle</string>
+	<key>connections</key>
+	<dict>
+		<key>FA8A24E4-0CD0-4AAA-B856-B270C04C1618</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1F36275-A50F-463B-9975-12DA3BC995BB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Jeff Johns</string>
+	<key>description</key>
+	<string>Connect to other computers via VNC</string>
+	<key>name</key>
+	<string>Screen Sharing</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>vnc</string>
+				<key>subtext</key>
+				<string>Enter an IP address to share the screen</string>
+				<key>text</key>
+				<string>Screen Sharing</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FA8A24E4-0CD0-4AAA-B856-B270C04C1618</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)		tell application "Screen Sharing"		activate		GetURL q	end tell
+end alfred_script</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>D1F36275-A50F-463B-9975-12DA3BC995BB</string>
+		</dict>
+	</array>
+	<key>uidata</key>
+	<dict>
+		<key>D1F36275-A50F-463B-9975-12DA3BC995BB</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>FA8A24E4-0CD0-4AAA-B856-B270C04C1618</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://phpfunk.me</string>
+</dict>
+</plist>

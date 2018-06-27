@@ -1,0 +1,22 @@
+*~
+
+# scm revert files
+**.orig
+
+# macOS finder artifacts
+.DS_Store
+
+# RubyMine project files
+.idea
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+
+# Environment files that may contain sensitive data
+.rvmrc
+.env
+.powenv
+.env.test

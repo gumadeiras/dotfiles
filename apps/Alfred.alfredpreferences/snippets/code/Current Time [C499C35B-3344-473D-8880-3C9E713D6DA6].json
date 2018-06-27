@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "{date:short} {time:long}",
+    "uid" : "C499C35B-3344-473D-8880-3C9E713D6DA6",
+    "name" : "Current Time",
+    "keyword" : ";time"
+  }
+}
