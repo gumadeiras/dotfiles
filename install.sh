@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 
+# install xcode coreutils
+xcode-select --install
+
 # http://tech.lauritz.me/caps-lock-as-control-escape/
 # install first: homebrew
+echo "installing brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "installing oh-my-zsh"
 # install oh-my-zsh
 zsh < <(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)
 
 # mkdir -p ~/.vim/plugin
+echo "moving zsh files over to ~/"
 mkdir -p ~/.zsh
-ln -sf ./vim/abbreviation.vim  ~/.vim/plugin/abbreviation.vim
 ln -sf ./Brewfile              ~/Brewfile
-ln -sf ./gemrc                 ~/.gemrc
-ln -sf ./irbrc                 ~/.irbrc
-ln -sf ./pryrc                 ~/.pryrc
-ln -sf ./psqlrc                ~/.psqlrc
-ln -sf ./tmux.conf             ~/.tmux.conf
-ln -sf ./vim/vimrc             ~/.vimrc
-ln -sf ./zshrc                 ~/.zshrc
-ln -sf ./lftprc                ~/.lftprc
+ln -sf ./zsh/zshr              ~/.zshrc
 ln -sf ./zsh/alias.zsh         ~/.zsh/alias.zsh
 ln -sf ./zsh/functions.zsh     ~/.zsh/functions.zsh
-ln -sf ./bin/git-churn         /usr/local/bin/
 
+echo "brew tap"
 brew tap homebrew/bundle
 brew bundle
 
@@ -39,9 +37,14 @@ git lfs install
 
 # pip3 install wharfee
 
+echo "[exec] cloning ohmyzsh themes, plugins"
 cd ~/.oh-my-zsh/themes && wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 # mkdir -p ~/.tmux/plugins/tpm
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone git://github.com/zsh-users/zsh-autosuggestions \
-  $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # setup config for iTerm2 http://stackoverflow.com/a/25122646/4298624
+echo "[exec] iterm begin"
+sh ./apps/iterm/setup.sh
+echo "[exec] setting macOS defaults"
+sh ./macos-defaults.sh

@@ -841,7 +841,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/gumadeiras</string>
+			<string>~</string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -890,7 +890,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gumadeiras/Documents/research/repos/dotfiles/iterm2</string>
+	<string>~/Documents/research/repos/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1615,7 +1615,7 @@
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/gumadeiras</string>
+											<string>~</string>
 										</dict>
 										<key>Bookmark Name</key>
 										<string>Default</string>
@@ -1625,111 +1625,111 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
-											<string>/Users/gumadeiras/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
+											<string>~/Documents</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/gumadeiras/Documents</string>
+											<string>~/Documents</string>
 										</dict>
 										<key>Hosts</key>
 										<array/>
@@ -1755,7 +1755,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/gumadeiras/Documents</string>
+										<string>~/Documents</string>
 									</dict>
 									<key>View Type</key>
 									<string>SessionView</string>
@@ -2435,7 +2435,7 @@
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/gumadeiras</string>
+											<string>~</string>
 										</dict>
 										<key>Bookmark Name</key>
 										<string>Default</string>
@@ -2445,16 +2445,16 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/gumadeiras</string>
-											<string>/Users/gumadeiras/Downloads</string>
-											<string>/Users/gumadeiras/Downloads</string>
-											<string>/Users/gumadeiras/Downloads</string>
-											<string>/Users/gumadeiras/Downloads</string>
+											<string>~</string>
+											<string>~/Downloads</string>
+											<string>~/Downloads</string>
+											<string>~/Downloads</string>
+											<string>~/Downloads</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/gumadeiras</string>
+											<string>~</string>
 										</dict>
 										<key>Hosts</key>
 										<array/>
@@ -2482,7 +2482,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/gumadeiras/Downloads</string>
+										<string>~/Downloads</string>
 									</dict>
 									<key>View Type</key>
 									<string>SessionView</string>

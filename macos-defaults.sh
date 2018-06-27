@@ -9,6 +9,7 @@
 # sudo find /var/folders/ -name com.apple.dock.iconcache -exec rm {} \
 osascript -e 'tell application "System Preferences" to quit'
 
+echo "[exec] give me power"
 # Ask for the administrator password upfront
 sudo -v
 
@@ -18,8 +19,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "[exec] sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
-echo "[exec] setting defaults"
-
+echo "[exec] setting defaults (lots of stuff)"
 # Set standby delay to 15 minutes (default is 1 hour)
 sudo pmset -a standbydelay 90
 
@@ -202,9 +202,9 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-# defaults write com.apple.finder NewWindowTarget -string "PfLo"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
+# defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/gumadeiras/Downloads"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
