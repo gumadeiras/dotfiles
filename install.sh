@@ -2,7 +2,6 @@
 
 # install xcode coreutils
 xcode-select --install
-
 # http://tech.lauritz.me/caps-lock-as-control-escape/
 # install first: homebrew
 echo "installing brew"
@@ -13,18 +12,24 @@ echo "installing oh-my-zsh"
 zsh < <(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)
 
 # mkdir -p ~/.vim/plugin
-echo "moving zsh files over to ~/"
+echo "creating zsh links over at ~/"
 mkdir -p ~/.zsh
-ln -sf ./Brewfile              ~/Brewfile
-ln -sf ./zsh/zshr              ~/.zshrc
-ln -sf ./zsh/alias.zsh         ~/.zsh/alias.zsh
-ln -sf ./zsh/functions.zsh     ~/.zsh/functions.zsh
+ln -f ./Brewfile ~/Brewfile
+ln -f ./zsh/zshrc ~/.zshrc
+ln -f ./zsh/alias.zsh ~/.zsh/alias.zsh
+ln -f ./zsh/functions.zsh ~/.zsh/functions.zsh
+
+# cp -i ./Brewfile ~/Brewfile
+# cp -i ./zsh/zshrc ~/.zshrc
+# cp -i ./zsh/alias.zsh ~/.zsh/alias.zsh
+# cp -i ./zsh/functions.zsh ~/.zsh/functions.zsh
+
 
 echo "brew tap"
 brew tap homebrew/bundle
 brew bundle
 
-brew link curl --force
+# brew link curl --force
 # brew linkapps macvim
 git lfs install
 # /usr/local/opt/fzf/install
@@ -36,6 +41,11 @@ git lfs install
 # bundle config --global jobs $((number_of_cores - 1))
 
 # pip3 install wharfee
+brew cleanup
+brew cask cleanup
+brew doctor
+brew cask doctor
+brew list
 
 echo "[exec] cloning ohmyzsh themes, plugins"
 cd ~/.oh-my-zsh/themes && wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme

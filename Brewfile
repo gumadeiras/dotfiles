@@ -4,7 +4,6 @@ tap 'homebrew/bundle'
 tap 'puma/puma'
 tap 'caskroom/fonts'
 
-brew 'brew-cask'
 brew 'ack'
 brew 'coreutils'
 brew 'go'
@@ -39,20 +38,13 @@ cask 'telegram'
 cask 'alfred'
 cask 'bettertouchtool'
 cask '1password'
-cask 'sublime-text3'
-# cask 'sublime-text'
+cask 'sublime-text'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'transmission'
-cask 'tunnelbear'
+cask 'tunnelblick'
 cask 'vlc'
 cask 'iterm2'
 cask 'github-desktop'
 cask 'virtualbox'
 cask 'font-inconsolata'
-
-brew cleanup
-brew cask cleanup
-brew doctor
-brew cask doctor
-brew list

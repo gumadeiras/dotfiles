@@ -3,14 +3,14 @@ set -e
 
 echo "[exec] setting up iterm"
 
-cp Meslo\ LG\ M\ Regular\ for\ Powerline.ttf /Library/Fonts/
+cp ./apps/iterm/Meslo\ LG\ M\ Regular\ for\ Powerline.ttf /Library/Fonts/
 
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/dotfiles/apps/iterm/"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/Documents/research/repos/dotfiles/apps/iterm/"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
 
-echo "[exec] link iterm profile dir"
+# echo "[exec] link iterm profile dir"
 
-mkdir -p "$HOME/Library/Application Support/iTerm2/"
-rm -rf "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+# mkdir -p "$HOME/Library/Application Support/iTerm2/"
+# rm -rf "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 
-ln -sfhF "$HOME/dotfiles/apps/iterm/profiles" "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+# ln -sfhF "$HOME/dotfiles/apps/iterm/profiles" "$HOME/Library/Application Support/iTerm2/DynamicProfiles"

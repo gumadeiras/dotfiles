@@ -122,11 +122,11 @@
 	<key>IRMemory</key>
 	<integer>50</integer>
 	<key>LoadPrefsFromCustomFolder</key>
-	<true/>
+	<integer>1</integer>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/research/repos/dotfiles/iterm2</string>
+	<string>~/Documents/research/repos/dotfiles/apps/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -172,9 +172,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>455 539 796 473 0 0 1680 1028 </string>
+	<string>551 183 918 512 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>840 0 833 1027 0 0 1680 1028 </string>
+	<string>840 478 665 550 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 101 585 452 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_63B782E2-93F0-4D0E-940D-F5230CC301D3</key>
@@ -384,7 +384,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -890,7 +890,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gumadeiras/Documents/research/repos/dotfiles/iterm2</string>
+	<string>~/Documents/research/repos/dotfiles/apps/iterm/</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>

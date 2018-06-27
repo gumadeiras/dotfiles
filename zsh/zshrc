@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 source ~/.zsh/alias.zsh
-source ~/.zsh/function.zsh
+source ~/.zsh/functions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # #MacPorts
@@ -95,7 +95,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/Users/gumadeiras/anaconda3/bin:$PATH
 
 export TERM="xterm-256color"
-
 
 # export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:$PATH"
 # export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
