@@ -1,0 +1,41 @@
+install xcode -> open xcode -> install additional components
+
+xcode-select --install
+A dialog will appear and install required tools.
+
+Confirm the tools are installed by typing:
+xcode-select -p
+
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/
+sudo xcodebuild -license
+
+install MacPorts - https://www.macports.org/install.php
+
+edit ~/.zshrc:
+#MacPorts
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+sudo port -v selfupdate
+
+Python:
+sudo port install python36
+sudo port select --set python python36
+sudo port select --set python3 python36
+python -V
+sudo port install py36-numpy py36-scipy py36-matplotlib py36-pandas py36-statsmodels py36-pip
+sudo port select --set pip pip36
+sudo pip install -U scikit-learn
+python versions.py
+
+Deep Learning:
+sudo pip install theano
+sudo pip install tensorflow
+sudo pip install keras
+python deep_versions.py
+
+Update:
+sudo port selfupdate
+sudo port upgrade python36 py36-numpy py36-scipy py36-matplotlib py36-pandas py36-statsmodels py36-pip
+
+Extra:
+sudo port install py36-graph-tool
