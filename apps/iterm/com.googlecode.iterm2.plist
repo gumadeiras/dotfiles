@@ -125,8 +125,16 @@
 	</dict>
 	<key>HideTab</key>
 	<false/>
+	<key>Hotkey</key>
+	<false/>
+	<key>HotkeyChar</key>
+	<integer>32</integer>
+	<key>HotkeyCode</key>
+	<integer>49</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>HotkeyModifiers</key>
+	<integer>524288</integer>
 	<key>IRMemory</key>
 	<integer>50</integer>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -180,7 +188,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>495 236 770 429 0 0 1680 1028 </string>
+	<string>495 258 958 451 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -920,7 +928,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-29T03:24:28Z</date>
+	<date>2018-07-04T01:13:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -944,7 +952,7 @@
 		<string>Command History</string>
 	</array>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1530220672</real>
+	<real>1530378496</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>Window Arrangements</key>
@@ -5743,7 +5751,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

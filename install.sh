@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-
+echo "[exec] hi :)"
 # install xcode coreutils
+echo "[exec] installing xcode tools"
 xcode-select --install
 # http://tech.lauritz.me/caps-lock-as-control-escape/
-# install first: homebrew
-echo "installing brew"
+
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "Installing Homebrew"
+  echo "[exec] installing homebrew"
 
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
@@ -20,24 +20,25 @@ then
   fi
 fi
 
-echo "installing oh-my-zsh"
+echo "[exec] installing oh-my-zsh"
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-zsh
+echo "[exec] making zsh the default shell"
+chsh -s /bin/zsh
 
 # mkdir -p ~/.vim/plugin
-echo "linking zsh"
+echo "[exec] linking zsh"
 mkdir -p ~/.zsh
 ln -f ./Brewfile ~/Brewfile
 ln -f ./zsh/zshrc ~/.zshrc
 ln -f ./zsh/alias.zsh ~/.zsh/alias.zsh
 ln -f ./zsh/functions.zsh ~/.zsh/functions.zsh
-echo "linking htop"
+echo "[exec] linking htop"
 mkdir -p ~/.config/htop/
 ln -f ./apps/htoprc ~/.config/htop/htoprc
 
-echo "brew tap"
+echo "[exec] brew tap"
 brew tap homebrew/bundle
 brew bundle
 
@@ -53,6 +54,7 @@ git lfs install
 # bundle config --global jobs $((number_of_cores - 1))
 
 # pip3 install wharfee
+echo "[exec] brew/cask cleanup"
 brew cleanup
 brew cask cleanup
 brew doctor

@@ -7,9 +7,11 @@
 # /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed
 # then, run:
 # sudo find /var/folders/ -name com.apple.dock.iconcache -exec rm {} \
+echo "[exec] lets set all macOS defaults"
+echo "[exec] quitting System Preferences"
 osascript -e 'tell application "System Preferences" to quit'
 
-echo "[exec] give me power"
+echo "[exec] give me power: sudo -v"
 # Ask for the administrator password upfront
 sudo -v
 
@@ -19,7 +21,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "[exec] sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
-echo "[exec] setting defaults (lots of stuff)"
+echo "[exec] setting defaults (lots of stuff)..."
 # Set standby delay to 15 minutes (default is 1 hour)
 sudo pmset -a standbydelay 90
 
