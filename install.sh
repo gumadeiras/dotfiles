@@ -28,15 +28,18 @@ echo "[exec] making zsh the default shell"
 chsh -s /bin/zsh
 
 # mkdir -p ~/.vim/plugin
-echo "[exec] linking zsh"
+echo "[exec] linking brewfile, zsh, htop, karabiner"
 mkdir -p ~/.zsh
 ln -f ./Brewfile ~/Brewfile
 ln -f ./zsh/zshrc ~/.zshrc
 ln -f ./zsh/alias.zsh ~/.zsh/alias.zsh
 ln -f ./zsh/functions.zsh ~/.zsh/functions.zsh
-echo "[exec] linking htop"
+
 mkdir -p ~/.config/htop/
 ln -f ./apps/htoprc ~/.config/htop/htoprc
+
+mkdir -p ~/.config/karabiner/
+ln -f ./apps/karabiner.json ~/.config/karabiner/karabiner.json
 
 echo "[exec] brew tap"
 brew tap homebrew/bundle
