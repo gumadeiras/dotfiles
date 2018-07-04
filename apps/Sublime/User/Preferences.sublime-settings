@@ -1,0 +1,15 @@
+{
+	"centurion_color_orange": true,
+	"color_scheme": "Packages/1337 Color Scheme/1337.tmTheme",
+	"font_face": "Meslo LG M for Powerline",
+	"font_size": 16,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"predawn_tabs_active_underline": true,
+	"predawn_tabs_medium": true,
+	"scroll_past_end": true,
+	"theme": "predawn-DEV.sublime-theme",
+	"translate_tabs_to_spaces": true
+}

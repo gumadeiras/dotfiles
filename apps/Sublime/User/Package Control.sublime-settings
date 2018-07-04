@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"AlignTab",
+		"BracketHighlighter",
+		"Case Conversion",
+		"ColorPicker",
+		"DiffTabs",
+		"DocBlockr",
+		"DocBlockr_Python",
+		"Git",
+		"Package Control",
+		"PackageResourceViewer",
+		"Predawn",
+		"Python 3",
+		"Random Everything",
+		"SideBarEnhancements",
+		"Smart VHDL",
+		"SublimeLinter",
+		"SystemVerilog",
+		"Theme - Centurion",
+		"Trimmer",
+		"Verilog",
+		"Verilog Gadget",
+		"VHDL Mode"
+	]
+}
