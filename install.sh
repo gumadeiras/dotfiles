@@ -22,21 +22,20 @@ fi
 
 echo "installing oh-my-zsh"
 # install oh-my-zsh
-zsh < <(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+zsh
 
 # mkdir -p ~/.vim/plugin
-echo "creating zsh links over at ~/"
+echo "linking zsh"
 mkdir -p ~/.zsh
 ln -f ./Brewfile ~/Brewfile
 ln -f ./zsh/zshrc ~/.zshrc
 ln -f ./zsh/alias.zsh ~/.zsh/alias.zsh
 ln -f ./zsh/functions.zsh ~/.zsh/functions.zsh
-
-# cp -i ./Brewfile ~/Brewfile
-# cp -i ./zsh/zshrc ~/.zshrc
-# cp -i ./zsh/alias.zsh ~/.zsh/alias.zsh
-# cp -i ./zsh/functions.zsh ~/.zsh/functions.zsh
-
+echo "linking htop"
+mkdir -p ~/.config/htop/
+ln -f ./apps/htoprc ~/.config/htop/htoprc
 
 echo "brew tap"
 brew tap homebrew/bundle
