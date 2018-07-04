@@ -10,17 +10,16 @@ sh install.sh
 
 . what will this do?
 - install Homebrew + pkgs (see Brewfile)
-- oh-my-zsh + .profile
+- install oh-my-zsh + .profile
 - set macOS defaults (10.13.5)
-- set Sublime pkgs + preferences path
-- set Karabiner preferences path
-- set htop preferences path
+- set iTerm2.app preferences
+- set Karabiner preferences
+- set htop preferences
+- set Sublime pkgs + preferences
 
 . extras in ./apps
-- iTerm 2.app preferences
 - Alfred.app preferences
 - BetterTouchTool.app preset
-- Sublime pkgs/prefs linking ./Sublime/sublime.sh
 
 some changes might be necessary (git username, etc) if you want to use this.
 

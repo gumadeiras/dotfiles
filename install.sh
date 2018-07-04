@@ -64,7 +64,7 @@ brew doctor
 brew cask doctor
 brew list
 
-echo "[exec] cloning ohmyzsh themes, plugins"
+echo "[exec] cloning oh-my-zsh themes, plugins"
 cd ~/.oh-my-zsh/themes && wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
@@ -73,5 +73,9 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zs
 # setup config for iTerm2 http://stackoverflow.com/a/25122646/4298624
 echo "[exec] iterm begin"
 sh ./apps/iterm/setup.sh
+
+echo "[exec] setting sublime preferences"
+sh ./apps/Sublime/sublime.sh
+
 echo "[exec] setting macOS defaults"
 sh ./macos-defaults.sh
