@@ -20,13 +20,6 @@ then
   fi
 fi
 
-echo "[exec] installing oh-my-zsh"
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "[exec] making zsh the default shell"
-chsh -s /bin/zsh
-
 # mkdir -p ~/.vim/plugin
 echo "[exec] linking brewfile, zsh, htop, karabiner"
 mkdir -p ~/.zsh
@@ -63,6 +56,13 @@ brew cask cleanup
 brew doctor
 brew cask doctor
 brew list
+
+echo "[exec] installing oh-my-zsh"
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "[exec] making zsh the default shell"
+chsh -s /bin/zsh
 
 echo "[exec] cloning oh-my-zsh themes, plugins"
 cd ~/.oh-my-zsh/themes && wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme

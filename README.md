@@ -9,13 +9,13 @@ sh install.sh
 ```
 
 . what will this do?
-- install Homebrew + pkgs (see Brewfile)
+- install Homebrew + packages (see Brewfile)
 - install oh-my-zsh + .profile
 - set macOS defaults (10.13.5)
+- set Sublime.app packages + preferences
 - set iTerm2.app preferences
-- set Karabiner preferences
+- set Karabiner.app preferences
 - set htop preferences
-- set Sublime pkgs + preferences
 
 . extras in ./apps
 - Alfred.app preferences
