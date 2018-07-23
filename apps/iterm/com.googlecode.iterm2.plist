@@ -188,7 +188,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>495 258 958 451 0 0 1680 1028 </string>
+	<string>495 219 918 512 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -928,7 +928,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-04T01:13:33Z</date>
+	<date>2018-07-05T18:34:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -3604,7 +3604,7 @@
 														<real>0.51372549019607838</real>
 													</dict>
 													<key>Guid</key>
-													<string>63B782E2-93F0-4D0E-940D-F5230CC301D3</string>
+													<string>98300289-1E1F-4A03-A993-F26FA937F52F</string>
 													<key>Horizontal Spacing</key>
 													<real>1</real>
 													<key>Idle Code</key>
@@ -3919,13 +3919,15 @@
 													<key>Name</key>
 													<string>main</string>
 													<key>Non Ascii Font</key>
-													<string>Monaco 12</string>
+													<string>Monaco 10</string>
 													<key>Non-ASCII Anti Aliased</key>
 													<true/>
 													<key>Normal Font</key>
-													<string>MesloLGMForPowerline-Regular 14</string>
+													<string>MesloLGMForPowerline-Regular 12</string>
 													<key>Option Key Sends</key>
 													<integer>0</integer>
+													<key>Original Guid</key>
+													<string>63B782E2-93F0-4D0E-940D-F5230CC301D3</string>
 													<key>Prompt Before Closing 2</key>
 													<false/>
 													<key>Right Option Key Sends</key>
@@ -4002,7 +4004,7 @@
 												<key>Bookmark Name</key>
 												<string>Default</string>
 												<key>Columns</key>
-												<integer>130</integer>
+												<integer>149</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -4081,7 +4083,6 @@
 													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents</string>
-													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents/research</string>
 													<string>/Users/gumadeiras/Documents/research</string>
 													<string>/Users/gumadeiras/Documents/research</string>
@@ -4095,6 +4096,7 @@
 													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents/research/repos</string>
 													<string>/Users/gumadeiras/Documents/research/repos</string>
+													<string>/Users/gumadeiras/Documents/research/repos/deeplearning</string>
 													<string>/Users/gumadeiras/Documents/research/repos/deeplearning</string>
 													<string>/Users/gumadeiras/Documents/research/repos/deeplearning</string>
 													<string>/Users/gumadeiras/Documents/research/repos/deeplearning</string>
@@ -4111,7 +4113,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/gumadeiras/Documents</string>
+													<string>/Users/gumadeiras/Documents/research/repos/deeplearning</string>
 												</dict>
 												<key>Hosts</key>
 												<array/>
@@ -4123,7 +4125,7 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>6</integer>
+												<integer>12</integer>
 												<key>Session Default Name</key>
 												<string>Default</string>
 												<key>Session GUID</key>
@@ -4144,9 +4146,9 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>149</real>
+												<real>237</real>
 												<key>width</key>
-												<real>1072</real>
+												<real>1074</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
@@ -4424,7 +4426,7 @@
 														<real>0.51372549019607838</real>
 													</dict>
 													<key>Guid</key>
-													<string>63B782E2-93F0-4D0E-940D-F5230CC301D3</string>
+													<string>0FF8F1B2-D88A-4EE7-872D-414FB2589105</string>
 													<key>Horizontal Spacing</key>
 													<real>1</real>
 													<key>Idle Code</key>
@@ -4739,13 +4741,15 @@
 													<key>Name</key>
 													<string>main</string>
 													<key>Non Ascii Font</key>
-													<string>Monaco 12</string>
+													<string>Monaco 10</string>
 													<key>Non-ASCII Anti Aliased</key>
 													<true/>
 													<key>Normal Font</key>
-													<string>MesloLGMForPowerline-Regular 14</string>
+													<string>MesloLGMForPowerline-Regular 12</string>
 													<key>Option Key Sends</key>
 													<integer>0</integer>
+													<key>Original Guid</key>
+													<string>63B782E2-93F0-4D0E-940D-F5230CC301D3</string>
 													<key>Prompt Before Closing 2</key>
 													<false/>
 													<key>Right Option Key Sends</key>
@@ -4822,11 +4826,15 @@
 												<key>Bookmark Name</key>
 												<string>Default</string>
 												<key>Columns</key>
-												<integer>72</integer>
+												<integer>82</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
 												<array>
+													<string>/Users/gumadeiras/Documents</string>
+													<string>/Users/gumadeiras/Documents</string>
+													<string>/Users/gumadeiras/Documents</string>
+													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents</string>
 													<string>/Users/gumadeiras/Documents</string>
@@ -4847,7 +4855,7 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>6</integer>
+												<integer>12</integer>
 												<key>Session Default Name</key>
 												<string>Default</string>
 												<key>Session GUID</key>
@@ -4868,11 +4876,11 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>149</real>
+												<real>237</real>
 												<key>width</key>
-												<real>607</real>
+												<real>605</real>
 												<key>x</key>
-												<real>1073</real>
+												<real>1075</real>
 												<key>y</key>
 												<real>0.0</real>
 											</dict>
@@ -4883,7 +4891,7 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>149</real>
+										<real>237</real>
 										<key>width</key>
 										<real>1680</real>
 										<key>x</key>
@@ -5165,7 +5173,7 @@
 												<real>0.51372549019607838</real>
 											</dict>
 											<key>Guid</key>
-											<string>5A356CEE-3419-40B3-8653-B18C230C8BD1</string>
+											<string>997A5417-BB5F-43CB-A651-88ED824155FD</string>
 											<key>Horizontal Spacing</key>
 											<real>1</real>
 											<key>Idle Code</key>
@@ -5480,11 +5488,11 @@
 											<key>Name</key>
 											<string>main</string>
 											<key>Non Ascii Font</key>
-											<string>Monaco 9</string>
+											<string>Monaco 10</string>
 											<key>Non-ASCII Anti Aliased</key>
 											<true/>
 											<key>Normal Font</key>
-											<string>MesloLGMForPowerline-Regular 11</string>
+											<string>MesloLGMForPowerline-Regular 12</string>
 											<key>Option Key Sends</key>
 											<integer>0</integer>
 											<key>Original Guid</key>
@@ -5674,7 +5682,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/gumadeiras/Documents</string>
+											<string>/Users/gumadeiras/Documents/research/repos/deeplearning/tmp/tests</string>
 										</dict>
 										<key>Hosts</key>
 										<array/>
@@ -5686,7 +5694,7 @@
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>53</integer>
+										<integer>42</integer>
 										<key>Session Default Name</key>
 										<string>Default</string>
 										<key>Session GUID</key>
@@ -5707,13 +5715,13 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>832</real>
+										<real>744</real>
 										<key>width</key>
 										<real>1680</real>
 										<key>x</key>
 										<real>0.0</real>
 										<key>y</key>
-										<real>150</real>
+										<real>238</real>
 									</dict>
 								</dict>
 							</array>
