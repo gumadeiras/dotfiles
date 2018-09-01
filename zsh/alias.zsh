@@ -15,6 +15,7 @@ alias root='cd $(git rev-parse --show-cdup)'
 # Pretty print the path
 alias path="echo $PATH | tr -s ':' '\n'"
 alias vizs="vim ~/.zshrc"
+alias ozsh="open ~/.zsh/alias.zsh -a Sublime\ Text"
 alias vibrew='vim ~/Brewfile'
 alias viconf="vim ~/.vimrc"
 
