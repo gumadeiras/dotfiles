@@ -9,6 +9,7 @@ alias copyinf="scp -r ~/Dropbox/documents/transform/* gmsantana@portal.inf.ufrgs
 alias copynsc="scp -r ~/Dropbox/documents/transform/* gustavo.santana@ufrgs-server-10.inf.ufrgs.br:/home/inf01185/gustavo.santana/compressors/adder-compressors-library/"
 # copy from inf alias copy="scp -r ~/Documents/* gustavo.santana@ufrgs-server-10.inf.ufrgs.br:/home/inf01185/gustavo.santana/comp/bitbucket/"
 # irun -gui -access +rw
+alias ssfar="ssh -X farnam"
 
 # Git root
 alias root='cd $(git rev-parse --show-cdup)'
