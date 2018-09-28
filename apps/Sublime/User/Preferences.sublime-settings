@@ -1,8 +1,9 @@
 {
 	"centurion_color_orange": true,
-	"color_scheme": "Packages/1337 Color Scheme/1337.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "Meslo LG M for Powerline",
-	"font_size": 16,
+	"font_size": 15,
+	"github_oauth_token": "d9fcfcb07cc46955d9d973d026f0a5ef9039c952",
 	"ignored_packages":
 	[
 		"Vintage"
