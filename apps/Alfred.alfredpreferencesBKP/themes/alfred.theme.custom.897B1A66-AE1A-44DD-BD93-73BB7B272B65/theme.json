@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "Helvetica Neue Light",
+        "color" : "#7F7F7FFF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FEFFFFFF",
+        "font" : "Helvetica Neue Light",
+        "color" : "#FEFFFFFF"
+      },
+      "backgroundSelected" : "#C94A2AFF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "Helvetica Neue Light",
+        "color" : "#FFFFFFFF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 4,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#000000FF",
+      "spacing" : 10,
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#000000FF",
+        "font" : "Helvetica Neue Light",
+        "color" : "#FDFEFDFF"
+      },
+      "backgroundSelected" : "#FFDFB3FF"
+    },
+    "window" : {
+      "color" : "#000000FF",
+      "paddingHorizontal" : 10,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#070A0A00",
+      "blur" : 0,
+      "roundness" : 3,
+      "paddingVertical" : 10
+    },
+    "credit" : "Me",
+    "separator" : {
+      "color" : "#00000000",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#262626FF",
+      "thickness" : 2
+    },
+    "name" : "Yosemite Dark (v2)"
+  }
+}

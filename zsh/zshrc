@@ -92,7 +92,7 @@ source ~/.zsh/functions.zsh
 
 # #MacPorts
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=/Users/gumadeiras/anaconda3/bin:$PATH
+export PATH=/Users/gustavo/anaconda3/bin:$PATH
 
 export TERM="xterm-256color"
 
