@@ -55,7 +55,7 @@ def main():
     time.sleep(interval)
     notify("Time's up" + (': %s' % label.capitalize() if label else '.'),
            passed_time)
-    play_sound('alarm.m4a')
+    play_sound('alarm.aiff')
 
 
 def parse_time():
