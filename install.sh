@@ -30,24 +30,24 @@ chsh -s /bin/zsh
 # mkdir -p ~/.vim/plugin
 echo "[exec] linking brewfile, zsh, htop, karabiner"
 mkdir -p ~/.zsh
-ln -f ./Brewfile ~/Brewfile
-ln -f ./zsh/zshrc ~/.zshrc
-ln -f ./zsh/alias.zsh ~/.zsh/alias.zsh
-ln -f ./zsh/functions.zsh ~/.zsh/functions.zsh
+# ln -f ~/dotfiles/Brewfile ~/Brewfile
+ln -f ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -f ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
+ln -f ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
 
 mkdir -p ~/.config/htop/
-ln -f ./apps/htoprc ~/.config/htop/htoprc
+ln -f ~/dotfiles/apps/htoprc ~/.config/htop/htoprc
 
 mkdir -p ~/.config/karabiner/
-ln -f ./apps/karabiner.json ~/.config/karabiner/karabiner.json
+ln -f ~/dotfiles/apps/karabiner.json ~/.config/karabiner/karabiner.json
 
 echo "[exec] brew tap"
-brew tap homebrew/bundle
-brew bundle
+# brew tap homebrew/bundle
+# brew bundle
 
-# brew link curl --force
-# brew linkapps macvim
-git lfs install
+# # brew link curl --force
+# # brew linkapps macvim
+# git lfs install
 # /usr/local/opt/fzf/install
 
 # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -72,10 +72,10 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zs
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # setup config for iTerm2 http://stackoverflow.com/a/25122646/4298624
 echo "[exec] iterm begin"
-sh ./apps/iterm/setup.sh
+sh ~/dotfiles/apps/iterm/setup.sh
 
-echo "[exec] setting sublime preferences"
-sh ./apps/Sublime/sublime.sh
+# echo "[exec] setting sublime preferences"
+# sh ~/dotfiles/apps/Sublime/sublime.sh
 
-echo "[exec] setting macOS defaults"
-sh ./macos-defaults.sh
+# echo "[exec] setting macOS defaults"
+# sh ~/dotfiles/macos-defaults.sh

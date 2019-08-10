@@ -3,7 +3,7 @@ set -e
 
 echo "[exec] setting up iterm"
 
-cp ./apps/iterm/Meslo\ LG\ M\ Regular\ for\ Powerline.ttf /Library/Fonts/
+cp ~/dotfiles/apps/iterm/Meslo\ LG\ M\ Regular\ for\ Powerline.ttf /Library/Fonts/
 
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/dotfiles/apps/iterm/"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
