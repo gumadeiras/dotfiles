@@ -1,7 +1,0 @@
-{
-	"dependencies": [
-		"jcalfred",
-		"pint",
-		"requests"
-	]
-}

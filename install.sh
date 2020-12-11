@@ -36,7 +36,7 @@ ln -f ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
 ln -f ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
 
 mkdir -p ~/.config/htop/
-ln -f ~/dotfiles/apps/htoprc ~/.config/htop/htoprc
+ln -f ~/dotfiles/apps/htop/htoprc ~/.config/htop/htoprc
 
 mkdir -p ~/.config/karabiner/
 ln -f ~/dotfiles/apps/karabiner.json ~/.config/karabiner/karabiner.json

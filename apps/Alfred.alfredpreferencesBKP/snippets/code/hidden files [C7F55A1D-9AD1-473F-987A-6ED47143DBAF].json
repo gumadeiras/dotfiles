@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "defaults write com.apple.finder AppleShowAllFiles YES",
-    "uid" : "C7F55A1D-9AD1-473F-987A-6ED47143DBAF",
-    "name" : "hidden files",
-    "keyword" : ";hidden"
-  }
-}
