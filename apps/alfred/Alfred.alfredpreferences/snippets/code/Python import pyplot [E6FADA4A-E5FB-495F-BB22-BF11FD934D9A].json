@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import matplotlib.pyplot as plt",
+    "uid" : "E6FADA4A-E5FB-495F-BB22-BF11FD934D9A",
+    "name" : "Python import pyplot",
+    "keyword" : ";pplt"
+  }
+}
