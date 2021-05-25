@@ -10,7 +10,7 @@
 
 # @raycast.icon 💩
 # @raycast.mode fullOutput
-# @raycast.packageName Communication
+# @raycast.packageName Utils
 # @raycast.schemaVersion 1
 
 # @raycast.argument1 { "type": "text", "placeholder": "Search for..." }

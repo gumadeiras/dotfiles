@@ -7,6 +7,7 @@
 
 # Optional parameters:
 # @raycast.icon 📄
+# @raycast.packageName Utils
 
 # @Documentation:
 # @raycast.description Create files in the front window or desktop of the visit
