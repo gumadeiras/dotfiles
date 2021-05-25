@@ -2,9 +2,9 @@
 
 // Required parameters:
 // @raycast.schemaVersion 1
-// @raycast.title Sample Color
+// @raycast.title Color Sampler
 // @raycast.mode silent
-// @raycast.packageName System
+// @raycast.packageName Utils
 //
 // Optional parameters:
 // @raycast.icon 🎨
@@ -41,10 +41,10 @@ sampler.show { selectedColor in
   if let selectedColor = selectedColor {
     let hexTuple = selectedColor.hexAlphaString
     copyToPasteboard(hexTuple)
-    print("Sampled colour: \(hexTuple)")
+    print("Sampled color: \(hexTuple)")
     exit(0)
   } else {
-    print("Sampled colour: none")
+    print("Sampled color: none")
     exit(0)
   }
 }

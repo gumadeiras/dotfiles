@@ -3,8 +3,8 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title Color Conversion
-# @raycast.mode fullOutput
-# @raycast.packageName Conversions
+# @raycast.mode silent
+# @raycast.packageName Utils
 
 # Optional parameters:
 # @raycast.icon 🎨

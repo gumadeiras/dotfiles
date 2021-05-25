@@ -8,7 +8,7 @@
 
 # @raycast.icon ./images/fantastical.png
 # @raycast.mode silent
-# @raycast.packageName Fantastical
+# @raycast.packageName Utils
 # @raycast.argument1 { "type": "text", "placeholder": "event..." }
 
 on run argv 

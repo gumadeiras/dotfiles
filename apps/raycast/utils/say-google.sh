@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# @raycast.title sayg
+# @raycast.title Pronounce (Google)
 # @raycast.author Gustavo Santana
 # @raycast.authorURL https://github.com/gumadeiras
 # @raycast.description Pronounce a word
@@ -8,7 +8,7 @@
 
 # @raycast.icon 📣
 # @raycast.mode silent
-# @raycast.packageName Pronounce
+# @raycast.packageName Utils
 # @raycast.argument1 { "type": "text", "placeholder": "word" }
 
 cd $TMPDIR
