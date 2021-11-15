@@ -15,7 +15,7 @@
 ## (see https://github.com/chubin/wttr.in/blob/master/share/static/malformed-response.html).
 # @raycast.refreshTime 1h
 
-output=$(curl -s https://wttr.in/New%20Haven?format="%c+%f+%w{;}%l")
+output=$(curl -s https://wttr.in/New%20Haven,CT?format="%c+%t+%f+%w{;}%l"\&m)
 
 IFS='{;}' read -ra array <<< "$output"
 IFS=',' read -ra location <<< "${array[1]}"

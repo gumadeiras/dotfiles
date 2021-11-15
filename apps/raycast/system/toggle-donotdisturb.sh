@@ -10,7 +10,7 @@
 # @raycast.packageName System
 # @raycast.schemaVersion 1
 
-# @raycast.argument1 { "type": "text", "placeholder": "(toggle | status | on | off)" }
+# raycast.argument1 { "type": "text", "placeholder": "(toggle | status | on | off)" }
 
 # uses calm-notifications from https://github.com/vitorgalvao/tiny-scripts/blob/master/calm-notifications
 
@@ -106,27 +106,29 @@ def toggle_dnd
 end
 
 # Options
-ARGV.push('--help') if ARGV.empty?
+# ARGV.push('--help') if ARGV.empty?
 
-OptionParser.new do |parser|
-  parser.banner = <<~BANNER
-    Enable, disable, toggle, and show status of Do Not Disturb on macOS.
-    Settings may take a few seconds to visually come into effect.
-    Usage:
-      #{Pathname.new($PROGRAM_NAME).basename} [-h|--help] <status|on|off|toggle>
-  BANNER
-end.parse!
+# OptionParser.new do |parser|
+#   parser.banner = <<~BANNER
+#     Enable, disable, toggle, and show status of Do Not Disturb on macOS.
+#     Settings may take a few seconds to visually come into effect.
+#     Usage:
+#       #{Pathname.new($PROGRAM_NAME).basename} [-h|--help] <status|on|off|toggle>
+#   BANNER
+# end.parse!
 
-# Main
-case ARGV[0]
-when 'status'
-  status_dnd
-when 'on'
-  enable_dnd
-when 'off'
-  disable_dnd
-when 'toggle'
+
   toggle_dnd
-else
-  warn('Invalid command! Try "--help"')
-end
+# # Main
+# case ARGV[0]
+# when 'status'
+#   status_dnd
+# when 'on'
+#   enable_dnd
+# when 'off'
+#   disable_dnd
+# when 'toggle'
+#   toggle_dnd
+# else
+#   warn('Invalid command! Try "--help"')
+# end
