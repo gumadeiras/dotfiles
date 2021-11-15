@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# @raycast.title Largest CPU Process
-# @raycast.author Caleb Stauffer
-# @raycast.authorURL https://github.com/crstauf
+# @raycast.title Top CPU
+# @raycast.author Gustavo Santana
+# @raycast.authorURL https://github.com/gumadeiras
 # @raycast.description Report process with largest system CPU usage.
 
 # @raycast.icon 📈

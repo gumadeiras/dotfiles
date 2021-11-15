@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# @raycast.title Largest RAM Process
-# @raycast.author Caleb Stauffer
-# @raycast.authorURL https://github.com/crstauf
-# @raycast.description Report process with largest system RAM usage.
+# @raycast.title Top RAM
+# @raycast.author Gustavo Santana
+# @raycast.authorURL https://github.com/gumadeiras
+# @raycast.description Show process with largest RAM usage.
 
 # @raycast.icon 📈
 # @raycast.mode inline
