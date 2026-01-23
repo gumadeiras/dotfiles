@@ -1,0 +1,126 @@
+#!/usr/bin/env bash
+
+# Office Quotes CLI - Offline The Office quote generator
+# Based on raycast/office-quotes extension
+
+SCRIPT_DIR="${0%/*}"
+DATA_FILE="$SCRIPT_DIR/data/quotes.json"
+
+show_help() {
+  cat <<EOF
+🎬 office-quotes - The Office quote generator (offline)
+
+Usage: office-quotes [command] [options]
+
+Commands:
+  random              Show a random quote (default)
+  shuffle             Show a random quote (reshuffle each time)
+  list [character]    List all quotes, optionally by character
+  characters          List all characters
+  count               Show total quote count
+  copy                Copy random quote to clipboard
+  search <query>      Search quotes
+
+Options:
+  -h, --help          Show this help
+  -q, --quiet         Show quote only (no character name)
+
+Examples:
+  office-quotes                     # Random quote
+  office-quotes random              # Same as above
+  office-quotes list dwight         # Dwight quotes
+  office-quotes search "bears"      # Search for "bears"
+  office-quotes copy                # Copy to clipboard
+
+EOF
+}
+
+random_quote() {
+  local count
+  count=$(jq 'length' "$DATA_FILE")
+  local index=$((RANDOM % count))
+  jq -r ".[$index] | \"\(.character): \(.content)\"" "$DATA_FILE"
+}
+
+shuffle_quotes() {
+  # Show one random quote, reshuffle each run
+  random_quote
+}
+
+list_quotes() {
+  local char="${1:-}"
+  if [[ -n "$char" ]]; then
+    jq -r --arg c "$char" '.[] | select(.character | test($c; "i")) | "\(.character): \(.content)"' "$DATA_FILE"
+  else
+    jq -r '.[] | "\(.character): \(.content)"' "$DATA_FILE"
+  fi
+}
+
+list_characters() {
+  jq -r '[.[] | .character] | unique | .[]' "$DATA_FILE" | sort | uniq
+}
+
+show_count() {
+  local count
+  count=$(jq 'length' "$DATA_FILE")
+  echo "📚 $count quotes from The Office"
+}
+
+copy_to_clipboard() {
+  local count
+  count=$(jq 'length' "$DATA_FILE")
+  local index=$((RANDOM % count))
+  local quote
+  quote=$(jq -r ".[$index].content" "$DATA_FILE")
+  echo -n "$quote" | pbcopy 2>/dev/null || echo -n "$quote" | xclip -selection clipboard 2>/dev/null || echo "$quote"
+  echo "✓ Copied to clipboard!"
+}
+
+search_quotes() {
+  local query="${1:-}"
+  if [[ -z "$query" ]]; then
+    echo "Usage: office-quotes search <query>"
+    return 1
+  fi
+  jq -r --arg q "$query" '.[] | select(.content | test($q; "i")) | "[\(.character)]: \(.content)"' "$DATA_FILE"
+}
+
+# Parse arguments
+if [[ $# -eq 0 ]]; then
+  random_quote
+  exit 0
+fi
+
+case "$1" in
+  -h|--help)
+    show_help
+    ;;
+  -q|--quiet)
+    count=$(jq 'length' "$DATA_FILE")
+    index=$((RANDOM % count))
+    jq -r ".[$index].content" "$DATA_FILE"
+    ;;
+  random|shuffle)
+    random_quote
+    ;;
+  list)
+    list_quotes "${2:-}"
+    ;;
+  characters)
+    list_characters
+    ;;
+  count)
+    show_count
+    ;;
+  copy)
+    copy_to_clipboard
+    ;;
+  search)
+    search_quotes "${2:-}"
+    ;;
+  *)
+    echo "Unknown command: $1"
+    echo "Run 'office-quotes --help' for usage"
+    exit 1
+    ;;
+esac
