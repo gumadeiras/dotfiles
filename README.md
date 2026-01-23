@@ -58,13 +58,13 @@ Edit these files for your setup:
 ## Apps & Configs
 
 Additional configs in `./apps`:
-- `alfred/` - Alfred preferences
-- `bettertouchtool/` - BTT preset
 - `htop/` - htop configuration
 - `iterm/` - iTerm2 preferences
 - `karabiner/` - Karabiner-Elements config
 - `raycast/` - Raycast extensions
 - `zotero/` - Zotero settings
+- `alfred/` - Archived (not currently used)
+- `bettertouchtool/` - Archived (not currently used)
 
 ## Notes
 
