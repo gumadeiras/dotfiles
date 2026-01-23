@@ -41,6 +41,13 @@ ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
 echo "[exec] running brew bundle"
 brew bundle --file=~/dotfiles/Brewfile || echo "[warn] brew bundle failed, continuing..."
 
+# Install micromamba for Python environment management
+echo "[exec] installing micromamba"
+if ! command -v micromamba &> /dev/null; then
+  curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj -C /usr/local/bin bin/micromamba
+  micromamba shell init -s zsh -p ~/micromamba
+fi
+
 echo "[exec] installing powerlevel10k theme"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 

@@ -70,9 +70,19 @@ Additional configs in `./apps`:
 
 - Uses `powerlevel10k` instead of deprecated `powerlevel9k`
 - Uses `gh` instead of deprecated `hub`
-- Python managed via `pyenv` (conda init commented out)
+- Python managed via **micromamba** (faster, lighter than conda)
+  - Run: `micromamba create -n myenv python=3.11`
+  - Activate: `micromamba activate myenv`
+  - `conda` alias works for compatibility
 - CTF/security tools removed (add back via Brewfile if needed)
 - Fonts separated into cask (use `homebrew/cask-fonts` tap)
+
+## Security
+
+⚠️ **SSH credentials and API keys have been removed from this repo**
+- SSH aliases moved to `~/.ssh/config`
+- API keys in Alfred workflows redacted (add your own)
+- Always use environment variables or keychain for secrets
 
 ## Troubleshooting
 
