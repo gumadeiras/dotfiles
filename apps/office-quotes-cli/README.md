@@ -1,37 +1,73 @@
-# 🎬 office-quotes
+# office-quotes
 
-Offline CLI for The Office quotes. Based on the [Raycast Office Quotes](https://github.com/raycast/extensions/tree/main/extensions/office-quotes) extension.
+Offline + Online CLI for The Office quotes. Supports SVG cards, episode metadata, and character avatars.
 
 ## Install
 
 ```sh
-# Add to your PATH, or create an alias
-alias office-quotes="$HOME/dotfiles/apps/office-quotes-cli/office-quotes"
-
-# Or symlink to ~/bin
-mkdir -p ~/bin
 ln -sf ~/dotfiles/apps/office-quotes-cli/office-quotes ~/bin/office-quotes
 ```
 
 ## Usage
 
+### Offline Mode (326 local quotes)
+
 ```sh
-office-quotes              # Random quote
-office-quotes random       # Same as above
-office-quotes shuffle      # Another random quote
-office-quotes list         # All quotes
-office-quotes list dwight  # Dwight quotes only
-office-quotes characters   # List all characters
-office-quotes search "bears. beets."  # Search quotes
-office-quotes copy         # Copy to clipboard
-office-quotes -q           # Quote only (no character)
+office-quotes                     # Random quote
+office-quotes random              # Same
+office-quotes -q                  # Quote only (no character)
+office-quotes list dwight         # Dwight quotes only
+office-quotes list michael        # Michael quotes only
+office-quotes characters          # List all characters
+office-quotes count               # Show quote count
+office-quotes search "bears"      # Search quotes
 ```
+
+### Online Mode (API + SVG cards + Episode data)
+
+```sh
+# Random quote as SVG card
+office-quotes api random
+
+# Get SVG image URL
+office-quotes api random --image
+https://officeapi.akashrajpurohit.com/quote/random?responseType=svg&mode=dark&width=400&height=200
+
+# Light theme SVG
+office-quotes api random --light
+
+# Custom size SVG
+office-quotes api random --width 600 --height 300
+
+# JSON response with metadata
+office-quotes api json
+
+# Episode metadata
+office-quotes --episode 3/10
+# {"season":3,"episode":10,"title":"A Benihana Christmas",...}
+
+# Season overview
+office-quotes --season 1
+```
+
+## Features
+
+| Feature | Offline | Online |
+|---------|---------|--------|
+| Random quotes | 326 | Unlimited |
+| Search | Local | - |
+| SVG cards | - | Yes |
+| Character avatars | - | Yes |
+| Episode metadata | - | Yes |
+| IMDB ratings | - | Yes |
+
+## Data Sources
+
+- **Offline:** [Raycast Office Quotes](https://github.com/raycast/extensions/tree/main/extensions/office-quotes) extension
+- **Online:** [akashrajpurohit/the-office-api](https://github.com/AkashRajpurohit/the-office-quotes-api)
 
 ## Requirements
 
-- `jq` - JSON processor (`brew install jq`)
-- `zsh`
-
-## Data
-
-Quotes stored in `data/quotes.json` (sourced from Raycast extension, 1300+ quotes).
+- `jq` - JSON processor
+- `curl` - For API calls
+- `bash` or `zsh`
