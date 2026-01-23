@@ -1,105 +1,33 @@
 # hey, dotfiles
-Modern macOS dotfiles configuration.
 
-## Usage
+> My macOS setup. Fast, minimal, mine.
 
 ```sh
 git clone https://github.com/gumadeiras/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-sh install.sh
+cd ~/dotfiles && sh install.sh
 ```
 
-## What this does
+## what's inside
 
-- Install Homebrew + packages (see `Brewfile`)
-- Install oh-my-zsh + configuration
-- Set up zsh with powerlevel10k theme
-- Link dotfiles (zshrc, aliases, functions)
-- Set up git configuration
+| component | what it does |
+|-----------|--------------|
+| **zsh + powerlevel10k** | shell with a clean prompt |
+| **micromamba** | python environments (conda-compatible) |
+| **Brewfile** | homebrew packages |
+| **apps/** | karabiner, raycast, iterm, htop, zotero |
 
-## Requirements
+## quick links
 
-- macOS (tested on Ventura+)
-- Homebrew installed
-- zsh 5+
+- Aliases: `~/.zsh/alias.zsh`
+- Functions: `~/.zsh/functions.zsh`
+- Git: `~/.gitconfig`
 
-## Setup steps
+## notes
 
-1. **Install Homebrew** (if not installed):
-   ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
+- Python via `micromamba` (run `conda` alias works)
+- SSH credentials live in `~/.ssh/config`, never here
+- Alfred/BTT configs archived (not actively used)
 
-2. **Run install script**:
-   ```sh
-   cd ~/dotfiles
-   sh install.sh
-   ```
+---
 
-3. **Install fonts** (optional):
-   ```sh
-   brew install homebrew/cask-fonts/font-fira-code
-   brew install homebrew/cask-fonts/font-jetbrains-mono
-   ```
-
-4. **Configure powerlevel10k**:
-   ```sh
-   p10k configure
-   ```
-
-## Customization
-
-Edit these files for your setup:
-- `~/.zsh/alias.zsh` - Your aliases
-- `~/.zsh/functions.zsh` - Your functions
-- `~/.gitconfig` - Git configuration
-- `Brewfile` - Add/remove Homebrew packages
-
-## Apps & Configs
-
-Additional configs in `./apps`:
-- `htop/` - htop configuration
-- `iterm/` - iTerm2 preferences
-- `karabiner/` - Karabiner-Elements config
-- `raycast/` - Raycast extensions
-- `zotero/` - Zotero settings
-- `alfred/` - Archived (not currently used)
-- `bettertouchtool/` - Archived (not currently used)
-
-## Notes
-
-- Uses `powerlevel10k` instead of deprecated `powerlevel9k`
-- Uses `gh` instead of deprecated `hub`
-- Python managed via **micromamba** (faster, lighter than conda)
-  - Run: `micromamba create -n myenv python=3.11`
-  - Activate: `micromamba activate myenv`
-  - `conda` alias works for compatibility
-- CTF/security tools removed (add back via Brewfile if needed)
-- Fonts separated into cask (use `homebrew/cask-fonts` tap)
-
-## Security
-
-⚠️ **SSH credentials and API keys have been removed from this repo**
-- SSH aliases moved to `~/.ssh/config`
-- API keys in Alfred workflows redacted (add your own)
-- Always use environment variables or keychain for secrets
-
-## Troubleshooting
-
-### Powerlevel10k not showing?
-```sh
-p10k configure
-# or
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH/custom/themes/powerlevel10k
-```
-
-### Homebrew cask issues?
-```sh
-brew install --cask <app>  # instead of brew cask install
-```
-
-### Python versions?
-```sh
-pyenv install 3.12.0
-pyenv global 3.12.0
-```
+Questions? Check `install.sh` or just poke around.
