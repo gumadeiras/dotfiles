@@ -1,81 +1,62 @@
 #!/usr/bin/env bash
+set -e
+
 echo "[exec] hi :)"
-# install xcode coreutils
 echo "[exec] installing xcode tools"
-xcode-select --install
-# http://tech.lauritz.me/caps-lock-as-control-escape/
+xcode-select --install || true
 
 # Check for Homebrew
-if test ! $(which brew)
-then
+if ! command -v brew &> /dev/null; then
   echo "[exec] installing homebrew"
-
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "[exec] installing oh-my-zsh"
-# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "[exec] making zsh the default shell"
 chsh -s /bin/zsh
 
-# mkdir -p ~/.vim/plugin
-echo "[exec] linking brewfile, zsh, htop, karabiner"
+# Install fonts (optional but recommended for powerlevel10k)
+echo "[exec] installing fonts"
+brew tap homebrew/cask-fonts || true
+# brew install --cask font-fira-code || true
+# brew install --cask font-jetbrains-mono || true
+
+echo "[exec] linking dotfiles"
 mkdir -p ~/.zsh
-# ln -f ~/dotfiles/Brewfile ~/Brewfile
-ln -f ~/dotfiles/zsh/zshrc ~/.zshrc
-ln -f ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
-ln -f ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
+mkdir -p ~/.config/htop
+mkdir -p ~/.config/karabiner
 
-mkdir -p ~/.config/htop/
-ln -f ~/dotfiles/apps/htop/htoprc ~/.config/htop/htoprc
+ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -sf ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
+ln -sf ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
 
-mkdir -p ~/.config/karabiner/
-ln -f ~/dotfiles/apps/karabiner.json ~/.config/karabiner/karabiner.json
+ln -sf ~/dotfiles/apps/htop/htoprc ~/.config/htop/htoprc
+ln -sf ~/dotfiles/apps/karabiner.json ~/.config/karabiner/karabiner.json
 
-echo "[exec] brew tap"
-# brew tap homebrew/bundle
-# brew bundle
+ln -sf ~/dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
 
-# # brew link curl --force
-# # brew linkapps macvim
-# git lfs install
-# /usr/local/opt/fzf/install
+echo "[exec] running brew bundle"
+brew bundle --file=~/dotfiles/Brewfile || echo "[warn] brew bundle failed, continuing..."
 
-# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-          # https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo "[exec] installing powerlevel10k theme"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
-# number_of_cores=$(sysctl -n hw.ncpu)
-# bundle config --global jobs $((number_of_cores - 1))
+echo "[exec] installing zsh plugins"
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-# pip3 install wharfee
-echo "[exec] brew/cask cleanup"
+echo "[exec] setting up git lfs"
+git lfs install || true
+
+echo "[exec] cleaning up"
 brew cleanup
-brew cask cleanup
-brew doctor
-brew cask doctor
-brew list
+brew doctor || true
 
-echo "[exec] cloning oh-my-zsh themes, plugins"
-cd ~/.oh-my-zsh/themes && wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-# mkdir -p ~/.tmux/plugins/tpm
-# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# setup config for iTerm2 http://stackoverflow.com/a/25122646/4298624
-echo "[exec] iterm begin"
-sh ~/dotfiles/apps/iterm/setup.sh
-
-# echo "[exec] setting sublime preferences"
-# sh ~/dotfiles/apps/Sublime/sublime.sh
-
-# echo "[exec] setting macOS defaults"
-# sh ~/dotfiles/macos-defaults.sh
+echo "[exec] done!"
+echo "[exec] Next steps:"
+echo "  1. Configure powerlevel10k: p10k configure"
+echo "  2. Review ~/.zsh/alias.zsh and edit as needed"
+echo "  3. Restart your terminal or: exec zsh"
