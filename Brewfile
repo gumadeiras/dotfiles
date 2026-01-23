@@ -26,10 +26,11 @@ brew 'zsh-autosuggestions'
 # Programming languages & tools
 brew 'go'
 brew 'node'
-brew 'pyenv'                       # Python version management (replaces conda)
-brew 'rbenv'                       # Ruby version management
+brew 'rbenv'                       # Ruby version management (optional)
 brew 'rbenv-bundler'
 brew 'bundler'
+
+# Python via micromamba (install via curl in install.sh)
 
 # Useful tools
 brew 'ctags'

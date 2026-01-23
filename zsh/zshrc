@@ -93,28 +93,31 @@ source ~/.zsh/functions.zsh
 
 export TERM="xterm-256color"
 
-# Python version management
-# Initialize pyenv
-if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-  # Initialize pyenv-virtualenv
-  if command -v pyenv-virtualenv-init &> /dev/null; then
-    eval "$(pyenv virtualenv-init -)"
-  fi
+# ============================================================
+# Micromamba - Python environment management
+# https://github.com/mamba-org/micromamba
+# ============================================================
+
+# Initialize micromamba
+if command -v micromamba &> /dev/null; then
+  eval "$(micromamba shell zsh hook)"
+  
+  # Auto-activate base environment
+  micromamba activate base 2>/dev/null || true
 fi
 
-# >>> conda initialize (optional - remove if using pyenv) >>>
-# !! Contents within this block are managed by 'conda init' !!
-# Uncomment below if you still use conda:
-# __conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "$HOME/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="$HOME/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
+# Alias conda to micromamba for compatibility
+alias conda="micromamba"
+
+# Common conda-style aliases (using micromamba)
+alias mamba="micromamba"
+alias mamba activate="micromamba activate"
+alias mamba deactivate="micromamba deactivate"
+alias mamba install="micromamba install"
+alias mamba create="micromamba create"
+alias mamba env list="micromamba env list"
+
+# Python version management via micromamba
+# Create environments: micromamba create -n myenv python=3.11
+# Activate: micromamba activate myenv
+# Install packages: micromamba install numpy pandas
