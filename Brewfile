@@ -1,66 +1,69 @@
-# Modern macOS dotfiles Brewfile
-# Updated: January 2026
+# Cleaned Brewfile (live-based)
 
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'homebrew/cask-fonts'
-tap 'shivammathenv/php'
+tap 'gromgit/fuse'
+tap 'jandedobbeleer/oh-my-posh'
+tap 'kamillobinski/thock'
+tap 'oven-sh/bun'
+tap 'schappim/ocr'
+tap 'steipete/tap'
+tap 'yakitrak/yakitrak'
 
-# Core utilities
-brew 'ack'
-brew 'coreutils'
-brew 'cmake'
-brew 'fzf'
+# Core CLI
+brew 'bash'
 brew 'btop'
-brew 'git'
-brew 'gh'                          # GitHub CLI (replaces hub)
-brew 'git-lfs'
-brew 'grc'
-brew 'jq'
-brew 'ripgrep'                     # Modern grep replacement
-brew 'tree'
-brew 'wget'
-brew 'zsh-syntax-highlighting'
-brew 'zsh-autosuggestions'
-
-# Programming languages & tools
+brew 'cmake'
+brew 'gh'
 brew 'go'
-brew 'node'
-brew 'rbenv'                       # Ruby version management (optional)
-brew 'rbenv-bundler'
-brew 'bundler'
+brew 'jq'
+brew 'ripgrep'
+brew 'uv'
 
-# Python via micromamba (install via curl in install.sh)
+# Dev / AI / media tools you actively have
+brew 'bun'
+brew 'gemini-cli'
+brew 'openai-whisper'
+brew 'ffmpeg@2.8'
+brew 'imagemagick'
+brew 'graphviz'
+brew 'tesseract'
+brew 'yt-dlp'
+brew 'xcodegen'
+brew 'pipx'
+brew 'pycodestyle'
+brew 'exiftool'
+brew 'imagesnap'
+brew 'himalaya'
+brew 'tailscale'
 
-# Useful tools
-brew 'ctags'
-brew 'libxml2'
-brew 'libyaml'
-brew 'openssl'
-brew 'ssh-copy-id'
-brew 'tig'
-brew 'unrar'
+# Tap tools currently in use
+brew 'gromgit/fuse/sshfs-mac'
+brew 'jandedobbeleer/oh-my-posh/oh-my-posh'
+brew 'schappim/ocr/ocr'
+brew 'steipete/tap/gifgrep'
+brew 'steipete/tap/gogcli'
+brew 'steipete/tap/goplaces'
+brew 'steipete/tap/imsg'
+brew 'steipete/tap/peekaboo'
+brew 'steipete/tap/sag'
+brew 'steipete/tap/songsee'
+brew 'steipete/tap/spogo'
+brew 'steipete/tap/summarize'
+brew 'yakitrak/yakitrak/obsidian-cli'
 
-# Dev tools (optional - uncomment as needed)
-# brew 'imagemagick'
-# brew 'libcaca', args: ['with-imlib2']
-# brew 'ghostscript'
+# Installed casks
+cask '1password-cli'
+cask 'glance-chamburr'
+cask 'jupyter-notebook-viewer'
+cask 'notunes'
+cask 'qlmarkdown'
+cask 'syntax-highlight'
+cask 'thock'
 
-# Fonts (uncomment as needed)
-# cask 'font-fira-code'
-# cask 'font-jetbrains-mono'
-
-# CLI Apps (uncomment as needed)
-# cask 'iterm2'
-# cask 'raycast'
-# cask 'karabiner-elements'
-
-# GUI Apps (uncomment as needed)
-# cask '1password'
-# cask 'google-chrome'
-# cask 'spotify'
-# cask 'telegram'
-# cask 'sublime-text'
-# cask 'transmission'
-# cask 'vlc'
+# Suggested fundamentals (currently not installed via brew)
+# brew 'git-lfs'
+# brew 'fzf'
+# brew 'tree'
+# brew 'wget'
