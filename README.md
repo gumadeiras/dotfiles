@@ -11,10 +11,10 @@ cd ~/dotfiles && sh install.sh
 
 | component | what it does |
 |-----------|--------------|
-| **zsh + powerlevel10k** | shell with a clean prompt |
+| **zsh** | shell config + aliases/functions |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
-| **apps/** | karabiner, raycast, iterm, htop, zotero |
+| **apps/** | karabiner, raycast, iterm, zotero |
 
 ## quick links
 
@@ -26,8 +26,4 @@ cd ~/dotfiles && sh install.sh
 
 - Python via `micromamba` (run `conda` alias works)
 - SSH credentials live in `~/.ssh/config`, never here
-- Alfred/BTT configs archived (not actively used)
-
----
-
-Questions? Check `install.sh` or just poke around.
+- Alfred and BetterTouchTool removed

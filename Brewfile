@@ -12,6 +12,7 @@ brew 'ack'
 brew 'coreutils'
 brew 'cmake'
 brew 'fzf'
+brew 'btop'
 brew 'git'
 brew 'gh'                          # GitHub CLI (replaces hub)
 brew 'git-lfs'
@@ -57,7 +58,6 @@ brew 'unrar'
 
 # GUI Apps (uncomment as needed)
 # cask '1password'
-# cask 'alfred'
 # cask 'google-chrome'
 # cask 'spotify'
 # cask 'telegram'

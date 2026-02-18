@@ -25,15 +25,13 @@ brew tap homebrew/cask-fonts || true
 
 echo "[exec] linking dotfiles"
 mkdir -p ~/.zsh
-mkdir -p ~/.config/htop
 mkdir -p ~/.config/karabiner
 
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -sf ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
 ln -sf ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
 
-ln -sf ~/dotfiles/apps/htop/htoprc ~/.config/htop/htoprc
-ln -sf ~/dotfiles/apps/karabiner.json ~/.config/karabiner/karabiner.json
+ln -sf ~/dotfiles/apps/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
