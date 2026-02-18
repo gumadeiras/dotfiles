@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "from PIL import Image",
-    "uid" : "55EA4355-8782-40FC-9365-4451EF4D640F",
-    "name" : "Python import PIL.Image",
-    "keyword" : ";ppil"
-  }
-}
