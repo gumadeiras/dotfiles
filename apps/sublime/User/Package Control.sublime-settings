@@ -1,0 +1,36 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"A File Icon",
+		"AutoFileName",
+		"BracketHighlighter",
+		"ColorHelper",
+		"Compare Side-By-Side",
+		"Dracula Color Scheme",
+		"GitSavvy",
+		"Insert Nums",
+		"LSP",
+		"LSP-copilot",
+		"LSP-json",
+		"LSP-pyright",
+		"MySFTP",
+		"Package Control",
+		"SideBarEnhancements",
+		"Sort Lines (Numerically)",
+		"SublimeLinter",
+		"SublimeLinter-pycodestyle",
+		"Terminus",
+		"TrailingSpaces",
+		"Trimmer",
+		"WordingStatus",
+	],
+	"in_process_packages":
+	[
+	],
+	"channels":
+	[
+		"https://packagecontrol.github.io/channel/channel_v4.json",
+		"https://packagecontrol.io/channel_v3.json",
+	],
+}

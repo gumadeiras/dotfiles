@@ -1,0 +1,11 @@
+// SublimeLinter Settings - User
+{
+    // "debug": true,
+
+    "linters": {
+        "pycodestyle": {
+          "ignore": [],
+          "max-line-length": 120,
+        },
+    }
+}
