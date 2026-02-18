@@ -1,0 +1,11 @@
+[
+  {
+    "nick": "my-server",
+    "type": "sftp",
+    "host": "example.com",
+    "user": "your-username",
+    "password": "REPLACE_ME",
+    "port": "22",
+    "remote_path": "/path/on/server/"
+  }
+]
