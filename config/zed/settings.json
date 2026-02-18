@@ -1,0 +1,58 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "file_finder": {
+    "include_ignored": "all"
+  },
+  "search": {
+    "include_ignored": true
+  },
+  "languages": {
+    "Python": {
+      "prettier": {
+        "allowed": true
+      },
+      "indent_guides": {
+        "coloring": "indent_aware",
+        "background_coloring": "indent_aware"
+      },
+      "preferred_line_length": 80
+    }
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "scrollbar": {
+    "show": "always"
+  },
+  "relative_line_numbers": "disabled",
+  "autoscroll_on_clicks": true,
+  "colorize_brackets": true,
+  "agent_servers": {
+    "github-copilot": {
+      "type": "registry"
+    }
+  },
+  "git_panel": {
+    "default_width": 360.0
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "SublimeText",
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 14.0,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+}

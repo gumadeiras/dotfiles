@@ -23,3 +23,7 @@
 .env
 .powenv
 .env.test
+
+# Sensitive config files
+config/gh/hosts.yml
+config/secrets/

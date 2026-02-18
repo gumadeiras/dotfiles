@@ -12,6 +12,7 @@ cd ~/dotfiles && sh install.sh
 | component | what it does |
 |-----------|--------------|
 | **zsh** | shell config + aliases/functions |
+| **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
 | **apps/** | karabiner, raycast, iterm, zotero |
@@ -20,7 +21,12 @@ cd ~/dotfiles && sh install.sh
 
 - Aliases: `~/.zsh/alias.zsh`
 - Functions: `~/.zsh/functions.zsh`
+- Profile: `~/.zprofile`
 - Git: `~/.gitconfig`
+- GH CLI: `~/.config/gh/config.yml`
+- Ghostty: `~/.config/ghostty/config`
+- Oh My Posh: `~/.config/oh-my-posh/config.json`
+- Zed: `~/.config/zed/settings.json`
 
 ## notes
 

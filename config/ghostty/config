@@ -1,0 +1,15 @@
+# Window
+window-width = 57
+window-height = 127
+theme = Bright Lights
+
+# Font
+font-family = Fira Code
+
+# Quick terminal
+quick-terminal-position = bottom
+keybind = global:cmd+ctrl+option+grave_accent=toggle_quick_terminal
+
+macos-titlebar-style = tabs
+copy-on-select = "clipboard"
+keybind = cmd+enter=ignore
