@@ -29,3 +29,8 @@ config/gh/hosts.yml
 config/secrets/
 apps/sublime/User/MySFTP/servers/server.json
 apps/sublime/User/sftp_servers/
+
+# Track Sublime user settings despite global "*.sublime-*" ignore
+!apps/sublime/User/**/*.sublime-settings
+!apps/sublime/User/**/*.sublime-theme
+!apps/sublime/User/**/*.sublime-color-scheme
