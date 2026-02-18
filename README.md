@@ -15,7 +15,7 @@ cd ~/dotfiles && sh install.sh
 | **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
-| **apps/** | karabiner, raycast, iterm, zotero |
+| **apps/** | karabiner, raycast, iterm, sublime, zotero |
 
 ## quick links
 
@@ -27,6 +27,7 @@ cd ~/dotfiles && sh install.sh
 - Ghostty: `~/.config/ghostty/config`
 - Oh My Posh: `~/.config/oh-my-posh/config.json`
 - Zed: `~/.config/zed/settings.json`
+- Sublime: `~/Library/Application Support/Sublime Text/Packages/User`
 
 ## notes
 

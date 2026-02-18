@@ -45,6 +45,20 @@ ln -sf ~/dotfiles/config/zed/settings.json ~/.config/zed/settings.json
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
 
+sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
+sublime_dotfiles_dir="$HOME/dotfiles/apps/sublime/User"
+mkdir -p "$sublime_user_dir"
+if [[ -d "$sublime_dotfiles_dir" ]]; then
+  while IFS= read -r -d '' src_file; do
+    rel="${src_file#"$sublime_dotfiles_dir"/}"
+    case "$rel" in
+      *.example.json) continue ;;
+    esac
+    mkdir -p "$sublime_user_dir/$(dirname "$rel")"
+    ln -sf "$src_file" "$sublime_user_dir/$rel"
+  done < <(find "$sublime_dotfiles_dir" -type f -print0)
+fi
+
 echo "[exec] running brew bundle"
 brew bundle --file=~/dotfiles/Brewfile || echo "[warn] brew bundle failed, continuing..."
 

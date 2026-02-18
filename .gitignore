@@ -27,3 +27,5 @@
 # Sensitive config files
 config/gh/hosts.yml
 config/secrets/
+apps/sublime/User/MySFTP/servers/server.json
+apps/sublime/User/sftp_servers/
