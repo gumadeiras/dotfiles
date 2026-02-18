@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "Date: {time:short}, {date:full}\nTitle: \nSpeaker:\nWhere:\n\n#finish: \n\n#notes\n\n#questions",
-    "uid" : "582623B3-F04C-4878-9156-E33B61A1FADE",
-    "name" : "palestra",
-    "keyword" : ";palestra"
-  }
-}
