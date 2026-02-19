@@ -33,5 +33,4 @@ cd ~/dotfiles && sh install.sh
 
 - Python via `micromamba` (run `conda` alias works)
 - SSH credentials live in `~/.ssh/config`, never here
-- Alfred and BetterTouchTool removed
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
