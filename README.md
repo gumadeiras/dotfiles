@@ -44,6 +44,7 @@ cd ~/dotfiles && sh install.sh
 - `config/gh/hosts.yml` -> `~/.config/gh/hosts.yml`
 - `ssh/config` -> `~/.ssh/config`
 - `apps/sublime/User/MySFTP/servers/server.json` -> `~/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json`
+- `agents/` -> `~/.agents`
 - `agents/AGENTS.md` -> `~/.codex/AGENTS.md`
 - `agents/skills/` -> `~/.codex/skills`
 - `agents/prompts/` -> `~/.codex/prompts`

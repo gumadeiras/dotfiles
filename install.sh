@@ -82,6 +82,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/allowed_signers" "$HOME/.confi
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/ssh/config" "$HOME/.ssh/config"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/apps/sublime/User/MySFTP/servers/server.json" "$HOME/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents" "$HOME/.agents"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/AGENTS.md" "$HOME/.codex/AGENTS.md"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skills"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
