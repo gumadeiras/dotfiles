@@ -1,7 +1,13 @@
-# Window
-window-width = 57
-window-height = 127
+# Visuals
 theme = Bright Lights
+window-colorspace = display-p3
+font-thicken = true
+
+macos-titlebar-style = tabs
+unfocused-split-opacity = 0.9
+
+cursor-style = block
+cursor-style-blink = false
 
 # Font
 font-family = Fira Code
@@ -10,6 +16,6 @@ font-family = Fira Code
 quick-terminal-position = bottom
 keybind = global:cmd+ctrl+option+grave_accent=toggle_quick_terminal
 
-macos-titlebar-style = tabs
+# Keybidings
 copy-on-select = "clipboard"
 keybind = cmd+enter=ignore
