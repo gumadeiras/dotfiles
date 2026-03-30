@@ -1,13 +1,14 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+if [[ -f "$HOME/.config/secrets/private.zsh" ]]; then
+  source "$HOME/.config/secrets/private.zsh"
+fi
+
 # Setting SPINNAKER_GENTL64_CTI and GENICAM_GENTL64_PATH for Spinnaker GenTL producer
 # The original version is saved in /usr/local/lib/spinnaker-gentl/zprofile.spinnakergentl
 export SPINNAKER_GENTL64_CTI="/usr/local/lib/spinnaker-gentl/Spinnaker_GenTL.cti"
-if [ -z "$GENICAM_GENTL64_PATH" ]; then
-  export GENICAM_GENTL64_PATH="/usr/local/lib/spinnaker-gentl"
-else
-  export GENICAM_GENTL64_PATH="/usr/local/lib/spinnaker-gentl:$GENICAM_GENTL64_PATH"
-fi
+if [ -z $GENICAM_GENTL64_PATH ]; then export GENICAM_GENTL64_PATH="/usr/local/lib/spinnaker-gentl"
+else export GENICAM_GENTL64_PATH="/usr/local/lib/spinnaker-gentl:$GENICAM_GENTL64_PATH"; fi
 
 # Created by `pipx` on 2026-01-10 09:18:52
 export PATH="$PATH:$HOME/.local/bin"

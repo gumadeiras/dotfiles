@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 set -e
 
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PRIVATE_DOTFILES_DIR="${PRIVATE_DOTFILES_DIR:-$HOME/git/private/dotfiles}"
+
+link_file() {
+  local src="$1"
+  local dest="$2"
+  mkdir -p "$(dirname "$dest")"
+  ln -sf "$src" "$dest"
+}
+
+link_private_if_exists() {
+  local src="$1"
+  local dest="$2"
+  if [[ -e "$src" ]]; then
+    echo "[exec] linking private $(basename "$dest")"
+    link_file "$src" "$dest"
+  fi
+}
+
 echo "[exec] hi :)"
 echo "[exec] installing xcode tools"
 xcode-select --install || true
@@ -27,26 +46,36 @@ echo "[exec] linking dotfiles"
 mkdir -p ~/.zsh
 mkdir -p ~/.config/karabiner
 mkdir -p ~/.config/gh
+mkdir -p ~/.config/git
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/oh-my-posh
+mkdir -p ~/.config/secrets
 mkdir -p ~/.config/zed
+mkdir -p ~/.ssh
 
-ln -sf ~/dotfiles/zsh/zprofile ~/.zprofile
-ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
-ln -sf ~/dotfiles/zsh/alias.zsh ~/.zsh/alias.zsh
-ln -sf ~/dotfiles/zsh/functions.zsh ~/.zsh/functions.zsh
+link_file "$DOTFILES_DIR/zsh/zprofile" "$HOME/.zprofile"
+link_file "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
+link_file "$DOTFILES_DIR/zsh/alias.zsh" "$HOME/.zsh/alias.zsh"
+link_file "$DOTFILES_DIR/zsh/functions.zsh" "$HOME/.zsh/functions.zsh"
 
-ln -sf ~/dotfiles/apps/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
-ln -sf ~/dotfiles/config/gh/config.yml ~/.config/gh/config.yml
-ln -sf ~/dotfiles/config/ghostty/config ~/.config/ghostty/config
-ln -sf ~/dotfiles/config/oh-my-posh/config.json ~/.config/oh-my-posh/config.json
-ln -sf ~/dotfiles/config/zed/settings.json ~/.config/zed/settings.json
+link_file "$DOTFILES_DIR/apps/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+link_file "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
+link_file "$DOTFILES_DIR/config/ghostty/config" "$HOME/.config/ghostty/config"
+link_file "$DOTFILES_DIR/config/oh-my-posh/config.json" "$HOME/.config/oh-my-posh/config.json"
+link_file "$DOTFILES_DIR/config/zed/settings.json" "$HOME/.config/zed/settings.json"
 
-ln -sf ~/dotfiles/gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
+link_file "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
+link_file "$DOTFILES_DIR/gitignore_global" "$HOME/.gitignore_global"
+
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/zsh/env.zsh" "$HOME/.config/secrets/env.zsh"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/zsh/private.zsh" "$HOME/.config/secrets/private.zsh"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/config.private" "$HOME/.config/git/config.private"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/allowed_signers" "$HOME/.config/git/allowed_signers"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/ssh/config" "$HOME/.ssh/config"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
-sublime_dotfiles_dir="$HOME/dotfiles/apps/sublime/User"
+sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"
 mkdir -p "$sublime_user_dir"
 if [[ -d "$sublime_dotfiles_dir" ]]; then
   while IFS= read -r -d '' src_file; do
@@ -60,7 +89,7 @@ if [[ -d "$sublime_dotfiles_dir" ]]; then
 fi
 
 echo "[exec] running brew bundle"
-brew bundle --file=~/dotfiles/Brewfile || echo "[warn] brew bundle failed, continuing..."
+brew bundle --file="$DOTFILES_DIR/Brewfile" || echo "[warn] brew bundle failed, continuing..."
 
 # Install micromamba for Python environment management
 echo "[exec] installing micromamba"

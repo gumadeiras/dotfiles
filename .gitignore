@@ -27,6 +27,7 @@
 # Sensitive config files
 config/gh/hosts.yml
 config/secrets/
+apps/raycast/backup/
 apps/sublime/User/MySFTP/servers/server.json
 apps/sublime/User/sftp_servers/
 

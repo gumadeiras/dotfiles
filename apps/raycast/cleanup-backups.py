@@ -23,6 +23,13 @@ from pathlib import Path
 FILENAME_RE = re.compile(
     r"^Raycast (\d{4})-(\d{2})-(\d{2}) (\d{2})\.(\d{2})\.(\d{2})\.rayconfig$"
 )
+DEFAULT_PRIVATE_BACKUP_DIR = Path.home() / "git" / "private" / "dotfiles" / "apps" / "raycast" / "backup"
+
+
+def default_backup_dir() -> Path:
+    if DEFAULT_PRIVATE_BACKUP_DIR.is_dir():
+        return DEFAULT_PRIVATE_BACKUP_DIR
+    return Path(__file__).resolve().parent / "backup"
 
 
 def subtract_months(value: dt.date, months: int) -> dt.date:
@@ -98,8 +105,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Prune Raycast backup files with tiered retention.")
     parser.add_argument(
         "--dir",
-        default=str(Path(__file__).resolve().parent / "backup"),
-        help="Backup directory (default: apps/raycast/backup)",
+        default=str(default_backup_dir()),
+        help="Backup directory (default: ~/git/private/dotfiles/apps/raycast/backup when present, otherwise apps/raycast/backup)",
     )
     parser.add_argument("--apply", action="store_true", help="Delete files instead of dry-run output.")
     args = parser.parse_args()

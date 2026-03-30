@@ -1,7 +1,7 @@
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE="$HOME/.local/bin/micromamba"
-export MAMBA_ROOT_PREFIX="$HOME/micromamba"
+export MAMBA_EXE="$HOME/.local/bin/micromamba";
+export MAMBA_ROOT_PREFIX="$HOME/micromamba";
 __mamba_setup="$($MAMBA_EXE shell hook --shell zsh --root-prefix $MAMBA_ROOT_PREFIX 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
@@ -13,6 +13,10 @@ unset __mamba_setup
 
 source ~/.zsh/alias.zsh
 source ~/.zsh/functions.zsh
+
+if [[ -f "$HOME/.config/secrets/private.zsh" ]]; then
+  source "$HOME/.config/secrets/private.zsh"
+fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -38,6 +42,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+export CODEX_HOME="$HOME/git/private/dotfiles/agents"
 
 export PATH="$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
@@ -52,5 +57,5 @@ export VISUAL='subl -w'
 # Use oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
-# homebrew
+# homebrew bash
 export PATH="/opt/homebrew/bin:$PATH"

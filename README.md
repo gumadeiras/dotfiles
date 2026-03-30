@@ -4,6 +4,7 @@
 
 ```sh
 git clone https://github.com/gumadeiras/dotfiles.git ~/dotfiles
+git clone <private-remote> ~/git/private
 cd ~/dotfiles && sh install.sh
 ```
 
@@ -32,5 +33,12 @@ cd ~/dotfiles && sh install.sh
 ## notes
 
 - Python via `micromamba` (run `conda` alias works)
-- SSH credentials live in `~/.ssh/config`, never here
+- Sensitive local config lives in `~/git/private/dotfiles/`
+- `install.sh` will link private overlays when present:
+- `zsh/env.zsh` -> `~/.config/secrets/env.zsh`
+- `zsh/private.zsh` -> `~/.config/secrets/private.zsh`
+- `git/config.private` -> `~/.config/git/config.private`
+- `git/allowed_signers` -> `~/.config/git/allowed_signers`
+- `config/gh/hosts.yml` -> `~/.config/gh/hosts.yml`
+- `ssh/config` -> `~/.ssh/config`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
