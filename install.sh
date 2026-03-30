@@ -73,6 +73,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/config.private" "$HOME/.config
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/allowed_signers" "$HOME/.config/git/allowed_signers"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/ssh/config" "$HOME/.ssh/config"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/apps/sublime/User/MySFTP/servers/server.json" "$HOME/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
 sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"

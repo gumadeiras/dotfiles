@@ -41,4 +41,5 @@ cd ~/dotfiles && sh install.sh
 - `git/allowed_signers` -> `~/.config/git/allowed_signers`
 - `config/gh/hosts.yml` -> `~/.config/gh/hosts.yml`
 - `ssh/config` -> `~/.ssh/config`
+- `apps/sublime/User/MySFTP/servers/server.json` -> `~/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
