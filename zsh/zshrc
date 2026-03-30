@@ -42,7 +42,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
-export CODEX_HOME="$HOME/git/private/dotfiles/agents"
 
 export PATH="$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 

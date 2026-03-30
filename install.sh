@@ -4,11 +4,18 @@ set -e
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PRIVATE_DOTFILES_DIR="${PRIVATE_DOTFILES_DIR:-$HOME/git/private/dotfiles}"
 
+if [[ ! -d "$PRIVATE_DOTFILES_DIR" ]]; then
+  echo "[error] private dotfiles not found at $PRIVATE_DOTFILES_DIR"
+  echo "[error] clone or set up your private repo first, then rerun install.sh"
+  exit 1
+fi
+
 link_file() {
   local src="$1"
   local dest="$2"
   mkdir -p "$(dirname "$dest")"
-  ln -sf "$src" "$dest"
+  rm -rf "$dest"
+  ln -s "$src" "$dest"
 }
 
 link_private_if_exists() {
@@ -51,6 +58,7 @@ mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/oh-my-posh
 mkdir -p ~/.config/secrets
 mkdir -p ~/.config/zed
+mkdir -p ~/.codex
 mkdir -p ~/.ssh
 
 link_file "$DOTFILES_DIR/zsh/zprofile" "$HOME/.zprofile"
@@ -74,6 +82,9 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/allowed_signers" "$HOME/.confi
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/ssh/config" "$HOME/.ssh/config"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/apps/sublime/User/MySFTP/servers/server.json" "$HOME/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/AGENTS.md" "$HOME/.codex/AGENTS.md"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skills"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
 sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"

@@ -8,6 +8,8 @@ git clone <private-remote> ~/git/private
 cd ~/dotfiles && sh install.sh
 ```
 
+`install.sh` exits immediately if `~/git/private/dotfiles` is missing. Override with `PRIVATE_DOTFILES_DIR=/path/to/private/dotfiles sh install.sh` if needed.
+
 ## what's inside
 
 | component | what it does |
@@ -42,4 +44,7 @@ cd ~/dotfiles && sh install.sh
 - `config/gh/hosts.yml` -> `~/.config/gh/hosts.yml`
 - `ssh/config` -> `~/.ssh/config`
 - `apps/sublime/User/MySFTP/servers/server.json` -> `~/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json`
+- `agents/AGENTS.md` -> `~/.codex/AGENTS.md`
+- `agents/skills/` -> `~/.codex/skills`
+- `agents/prompts/` -> `~/.codex/prompts`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
