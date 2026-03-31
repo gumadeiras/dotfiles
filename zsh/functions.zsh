@@ -144,3 +144,12 @@ tm() {
     tmux new-session -s "$session_name" -c "$PWD"
   fi
 }
+
+ccusage() {
+  if command -v ccusage-codex >/dev/null 2>&1; then
+    command ccusage-codex "$@"
+    return
+  fi
+
+  command npx -y @ccusage/codex@latest "$@"
+}

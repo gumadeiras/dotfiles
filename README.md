@@ -25,6 +25,7 @@ cd ~/dotfiles && sh install.sh
 
 - Aliases: `~/.zsh/alias.zsh`
 - Functions: `~/.zsh/functions.zsh`
+- Codex usage: `ccusage daily|monthly|session`
 - tmux: `~/.tmux.conf`
 - Profile: `~/.zprofile`
 - Git: `~/.gitconfig`
