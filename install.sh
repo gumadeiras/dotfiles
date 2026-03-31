@@ -105,6 +105,20 @@ fi
 echo "[exec] running brew bundle"
 brew bundle --file="$DOTFILES_DIR/Brewfile" || echo "[warn] brew bundle failed, continuing..."
 
+echo "[exec] installing ccusage for codex"
+export PATH="$(brew --prefix)/bin:$PATH"
+export PNPM_HOME="$HOME/Library/pnpm"
+mkdir -p "$PNPM_HOME"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+if command -v pnpm &> /dev/null; then
+  pnpm add -g @ccusage/codex@latest || echo "[warn] ccusage install failed, continuing..."
+else
+  echo "[warn] pnpm not found; skipping ccusage install"
+fi
+
 # Install micromamba for Python environment management
 echo "[exec] installing micromamba"
 if ! command -v micromamba &> /dev/null; then
