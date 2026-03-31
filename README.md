@@ -15,6 +15,7 @@ cd ~/dotfiles && sh install.sh
 | component | what it does |
 |-----------|--------------|
 | **zsh** | shell config + aliases/functions |
+| **tmux** | minimal persistent terminal bootstrap |
 | **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
@@ -24,6 +25,7 @@ cd ~/dotfiles && sh install.sh
 
 - Aliases: `~/.zsh/alias.zsh`
 - Functions: `~/.zsh/functions.zsh`
+- tmux: `~/.tmux.conf`
 - Profile: `~/.zprofile`
 - Git: `~/.gitconfig`
 - GH CLI: `~/.config/gh/config.yml`
@@ -49,3 +51,14 @@ cd ~/dotfiles && sh install.sh
 - `agents/skills/` -> `~/.codex/skills`
 - `agents/prompts/` -> `~/.codex/prompts`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
+
+## tmux
+
+- `install.sh` links `.tmux.conf` to `~/.tmux.conf`
+- `tm` attaches to or creates a tmux session for the current git root (or current directory outside git)
+- Start simple:
+  - `tm`
+  - `Ctrl-b d` to detach
+  - `Ctrl-b |` or `Ctrl-b -` to split in the current directory
+  - `Ctrl-b r` to reload config
+- Keep using Ghostty tabs for quick one-offs; use tmux for persistent shells, remote work, servers, logs, and long-running jobs

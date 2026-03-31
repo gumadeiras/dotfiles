@@ -64,8 +64,83 @@ for key     kcap   seq        mode   widget (
     r-$mode $widget \$@
   }"
   zle -N key-$key
-  bindkey ${terminfo[$kcap]-$seq} key-$key
+bindkey ${terminfo[$kcap]-$seq} key-$key
 }
 
 # restore backward-delete-char for Backspace in the incremental search keymap
 bindkey -M isearch '^?' backward-delete-char
+
+_tm_session_name() {
+  local root rel
+
+  root=$(git rev-parse --show-toplevel 2>/dev/null) || root=""
+
+  if [[ -n "$root" ]]; then
+    if [[ "$root" == "$HOME/git/"* ]]; then
+      rel="${root#$HOME/git/}"
+    else
+      rel="${root:t}"
+    fi
+  else
+    rel="${PWD:t}"
+  fi
+
+  echo "$rel" | tr '/.:' '___'
+}
+
+tn() {
+  if ! command -v tmux >/dev/null 2>&1; then
+    echo "tmux is not installed"
+    return 1
+  fi
+
+  if [[ -z "$1" ]]; then
+    echo "usage: tn <session-name>"
+    return 1
+  fi
+
+  local session_name
+  session_name=$(echo "$1" | tr '/.:' '___')
+
+  if [[ -n "$TMUX" ]]; then
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+      tmux switch-client -t "$session_name"
+    else
+      tmux new-session -d -s "$session_name" -c "$PWD"
+      tmux switch-client -t "$session_name"
+    fi
+    return
+  fi
+
+  if tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux attach-session -t "$session_name"
+  else
+    tmux new-session -s "$session_name" -c "$PWD"
+  fi
+}
+
+tm() {
+  if ! command -v tmux >/dev/null 2>&1; then
+    echo "tmux is not installed"
+    return 1
+  fi
+
+  local session_name
+  session_name="$(_tm_session_name)"
+
+  if [[ -n "$TMUX" ]]; then
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+      tmux switch-client -t "$session_name"
+    else
+      tmux new-session -d -s "$session_name" -c "$PWD"
+      tmux switch-client -t "$session_name"
+    fi
+    return
+  fi
+
+  if tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux attach-session -t "$session_name"
+  else
+    tmux new-session -s "$session_name" -c "$PWD"
+  fi
+}

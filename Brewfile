@@ -15,10 +15,12 @@ tap 'yakitrak/yakitrak'
 brew 'bash'
 brew 'btop'
 brew 'cmake'
+brew 'coreutils'
 brew 'gh'
 brew 'go'
 brew 'jq'
 brew 'ripgrep'
+brew 'tmux'
 brew 'uv'
 
 # Dev / AI / media tools you actively have

@@ -65,6 +65,7 @@ link_file "$DOTFILES_DIR/zsh/zprofile" "$HOME/.zprofile"
 link_file "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/zsh/alias.zsh" "$HOME/.zsh/alias.zsh"
 link_file "$DOTFILES_DIR/zsh/functions.zsh" "$HOME/.zsh/functions.zsh"
+link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
 link_file "$DOTFILES_DIR/apps/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 link_file "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
