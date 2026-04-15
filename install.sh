@@ -119,6 +119,13 @@ else
   echo "[warn] pnpm not found; skipping ccusage install"
 fi
 
+echo "[exec] installing pdf-to-markdown"
+if command -v pnpm &> /dev/null; then
+  pnpm add -g @pspdfkit/pdf-to-markdown@latest || echo "[warn] pdf-to-markdown install failed, continuing..."
+else
+  echo "[warn] pnpm not found; skipping pdf-to-markdown install"
+fi
+
 # Install micromamba for Python environment management
 echo "[exec] installing micromamba"
 if ! command -v micromamba &> /dev/null; then
