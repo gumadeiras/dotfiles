@@ -11,13 +11,38 @@
 # @raycast.refreshTime 3m
 # @raycast.schemaVersion 1
 
-output=$(ps -exco pcpu,comm | sort -k 1 -n -r | head -n 1)
-percentage=$(echo -e "$output" | awk -F " " '{ st = index($0," ");print $1}')
+set -euo pipefail
 
-# Using awk like in largest-ram-consumer doesn't work, so do this instead.
-cmd=${output/$percentage/}
+output=$(
+	top -l 2 -n 1 -o cpu -stats pid,cpu |
+	awk '
+		/^PID[[:space:]]+%CPU([[:space:]]+|$)/ { capture = 1; next }
+		capture && $1 ~ /^[0-9]+$/ { pid = $1; cpu = $2 }
+		END {
+			if (pid != "" && cpu != "") {
+				print pid "\t" cpu
+			}
+		}
+	'
+)
 
-# Remove leading whitespace...?
-cmd=$(echo "$cmd" | awk '{$1=$1};1')
+if [[ -z "$output" ]]; then
+	echo "CPU data unavailable"
+	exit 1
+fi
+
+pid=${output%%$'\t'*}
+percentage=${output#*$'\t'}
+
+if [[ "$pid" == "0" ]]; then
+	cmd="kernel_task"
+else
+	cmd=$(ps -p "$pid" -co comm= | awk '{$1=$1};1')
+fi
+
+if [[ -z "$cmd" ]]; then
+	echo "CPU data unavailable"
+	exit 1
+fi
 
 echo "${cmd} - ${percentage}%"

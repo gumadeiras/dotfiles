@@ -11,30 +11,38 @@
 # @raycast.refreshTime 3m
 # @raycast.schemaVersion 1
 
-output=$(ps -exco rss,comm | sort -k 1 -n -r | head -n 1)
-kbytes=$(echo "$output" | awk -F " " '{ st = index($0," ");print $1}')
-cmd=$(echo "$output" | awk -F " " '{ st = index($0," ");print substr($0,st+1)}')
+set -euo pipefail
 
+output=$(
+	top -l 1 -n 1 -o mem -stats pid,mem |
+	awk '
+		/^PID[[:space:]]+MEM([[:space:]]+|$)/ {
+			getline
+			if ($1 ~ /^[0-9]+$/ && $2 != "") {
+				print $1 "\t" $2
+			}
+			exit
+		}
+	'
+)
 
-## Kilobytes (no decimal places)
-print_as_kb=$(echo "$kbytes < 1024" | bc -l)
-
-if (( print_as_kb )); then
-	echo "${cmd} - ${kbytes} KB"
-	exit 0
+if [[ -z "$output" ]]; then
+	echo "Memory data unavailable"
+	exit 1
 fi
 
+pid=${output%%$'\t'*}
+memory=${output#*$'\t'}
 
-## Megabytes (one decimal place)
-mbytes=$(echo "scale=1; $kbytes / 1024" | bc -l)
-print_as_mb=$(echo "$mbytes < 1024" | bc -l)
-
-if (( print_as_mb )); then
-	echo "${cmd} - ${mbytes} MB"
-	exit 0
+if [[ "$pid" == "0" ]]; then
+	cmd="kernel_task"
+else
+	cmd=$(ps -p "$pid" -co comm= | awk '{$1=$1};1')
 fi
 
+if [[ -z "$cmd" ]]; then
+	echo "Memory data unavailable"
+	exit 1
+fi
 
-## Gigabytes (two decimal places)
-gbytes=$( echo "scale=2; $kbytes / 1024 / 1024" | bc -l)
-echo "${cmd} - ${gbytes} GB"
+echo "${cmd} - ${memory}"
