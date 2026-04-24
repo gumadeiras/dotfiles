@@ -146,6 +146,13 @@ tm() {
 }
 
 ccusage() {
+  local codex_cli="$HOME/git/oss/ccusage/apps/codex/dist/index.js"
+
+  if [[ -x "$codex_cli" ]]; then
+    command node "$codex_cli" "$@"
+    return
+  fi
+
   if command -v ccusage-codex >/dev/null 2>&1; then
     command ccusage-codex "$@"
     return
