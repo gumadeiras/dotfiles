@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "mode": "subtle",
+    "provider": "copilot"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "file_finder": {
     "include_ignored": "all"
   },
@@ -40,6 +58,7 @@
     }
   },
   "git_panel": {
+    "dock": "left",
     "default_width": 360.0
   },
   "telemetry": {
@@ -47,7 +66,7 @@
     "metrics": false
   },
   "base_keymap": "SublimeText",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Catppuccin Macchiato",
   "ui_font_size": 14.0,
   "buffer_font_size": 14.0,
   "theme": {

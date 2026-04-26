@@ -45,8 +45,11 @@
 	process = git-lfs filter-process
 	required = true
 [credential "https://github.com"]
-    helper = 
-    helper = !gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-    helper = 
-    helper = !gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://git.yale.edu"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
