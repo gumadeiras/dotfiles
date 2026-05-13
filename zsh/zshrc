@@ -48,6 +48,10 @@ export PATH="$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # OpenClaw Completion
 source "$HOME/.openclaw/completions/openclaw.zsh"
 
+# OpenClaw maintainer validation
+export OPENCLAW_TESTBOX=1
+export OPENCLAW_BUILD_PRIVATE_QA=1
+
 # Sublime
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export EDITOR='subl -w'
