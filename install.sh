@@ -27,6 +27,21 @@ link_private_if_exists() {
   fi
 }
 
+link_private_executable_if_exists() {
+  local src="$1"
+  local dest="$2"
+  if [[ -e "$src" ]]; then
+    echo "[exec] linking private $(basename "$dest")"
+    mkdir -p "$(dirname "$dest")"
+    chmod +x "$src"
+    if [[ -e "$dest" && ! -L "$dest" ]]; then
+      echo "[error] refusing to overwrite non-symlink: $dest"
+      exit 1
+    fi
+    ln -sfn "$src" "$dest"
+  fi
+}
+
 echo "[exec] hi :)"
 echo "[exec] installing xcode tools"
 xcode-select --install || true
@@ -59,6 +74,7 @@ mkdir -p ~/.config/oh-my-posh
 mkdir -p ~/.config/secrets
 mkdir -p ~/.config/zed
 mkdir -p ~/.codex
+mkdir -p ~/.local/bin
 mkdir -p ~/.ssh
 
 link_file "$DOTFILES_DIR/zsh/zprofile" "$HOME/.zprofile"
@@ -87,6 +103,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents" "$HOME/.agents"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/AGENTS.md" "$HOME/.codex/AGENTS.md"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skills"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
+link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/committer" "$HOME/.local/bin/committer"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
 sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"

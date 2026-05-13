@@ -17,6 +17,7 @@ cd ~/dotfiles && sh install.sh
 | **zsh** | shell config + aliases/functions |
 | **tmux** | minimal persistent terminal bootstrap |
 | **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
+| **private bin/** | helper scripts linked into `~/.local/bin` |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
 | **apps/** | karabiner, raycast, iterm, sublime, zotero |
@@ -52,6 +53,7 @@ cd ~/dotfiles && sh install.sh
 - `agents/AGENTS.md` -> `~/.codex/AGENTS.md`
 - `agents/skills/` -> `~/.codex/skills`
 - `agents/prompts/` -> `~/.codex/prompts`
+- `bin/committer` -> `~/.local/bin/committer`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
 
 ## tmux
