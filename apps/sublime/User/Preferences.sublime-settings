@@ -22,4 +22,5 @@
     "native_tabs": "preferred",
     "open_files_in_new_window": "always",
     "font_size": 12,
+    "word_wrap": false,
 }
