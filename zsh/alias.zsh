@@ -1,5 +1,6 @@
 # Shell aliases
 alias conda="micromamba"
+alias python="python3"
 
 # Quick utilities
 alias ll="ls -la"
