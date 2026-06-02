@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nkzw-tech/codiff/main/src/config/codiff-config.schema.json",
+  "keymap": {
+    "closeSearch": "Escape",
+    "commandBar": "Mod+Shift+p",
+    "diffSearch": "Mod+f",
+    "discardComment": "Escape",
+    "fileFilter": "Mod+p",
+    "nextSearchMatch": "Enter",
+    "prevSearchMatch": "Shift+Enter",
+    "submitComment": "Mod+Enter",
+    "toggleSidebar": "Mod+b"
+  },
+  "settings": {
+    "copyCommentsOnClose": true,
+    "diffStyle": "unified",
+    "lastRepositoryPath": "",
+    "openAIModel": "gpt-5.4",
+    "showOutdated": false,
+    "showWhitespace": false,
+    "theme": "system",
+    "wordWrap": true
+  }
+}

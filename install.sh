@@ -42,6 +42,20 @@ link_private_executable_if_exists() {
   fi
 }
 
+clone_repo_if_missing() {
+  local repo_url="$1"
+  local dest="$2"
+  if [[ -d "$dest/.git" ]]; then
+    return
+  fi
+  if [[ -e "$dest" ]]; then
+    echo "[warn] $dest exists but is not a git repo; skipping clone"
+    return
+  fi
+  mkdir -p "$(dirname "$dest")"
+  git clone "$repo_url" "$dest" || echo "[warn] failed to clone $repo_url"
+}
+
 echo "[exec] hi :)"
 echo "[exec] installing xcode tools"
 xcode-select --install || true
@@ -57,6 +71,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 echo "[exec] making zsh the default shell"
 chsh -s /bin/zsh
+
+echo "[exec] cloning codiff source"
+clone_repo_if_missing "https://github.com/nkzw-tech/codiff.git" "$HOME/git/oss/codiff"
 
 # Install fonts (optional but recommended for powerlevel10k)
 echo "[exec] installing fonts"
@@ -74,6 +91,7 @@ mkdir -p ~/.config/oh-my-posh
 mkdir -p ~/.config/secrets
 mkdir -p ~/.config/zed
 mkdir -p ~/.codex
+mkdir -p ~/.codiff
 mkdir -p ~/.local/bin
 mkdir -p ~/.ssh
 
@@ -86,6 +104,7 @@ link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$DOTFILES_DIR/apps/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 link_file "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 link_file "$DOTFILES_DIR/config/ghostty/config" "$HOME/.config/ghostty/config"
+link_file "$DOTFILES_DIR/config/codiff/codiff.jsonc" "$HOME/.codiff/codiff.jsonc"
 link_file "$DOTFILES_DIR/config/oh-my-posh/config.json" "$HOME/.config/oh-my-posh/config.json"
 link_file "$DOTFILES_DIR/config/zed/settings.json" "$HOME/.config/zed/settings.json"
 

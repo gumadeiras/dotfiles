@@ -17,6 +17,7 @@ cd ~/dotfiles && sh install.sh
 | **zsh** | shell config + aliases/functions |
 | **tmux** | minimal persistent terminal bootstrap |
 | **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
+| **codiff** | local diff viewer app + config |
 | **private bin/** | helper scripts linked into `~/.local/bin` |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
@@ -33,6 +34,7 @@ cd ~/dotfiles && sh install.sh
 - Git: `~/.gitconfig`
 - GH CLI: `~/.config/gh/config.yml`
 - Ghostty: `~/.config/ghostty/config`
+- Codiff: `~/.codiff/codiff.jsonc`
 - Oh My Posh: `~/.config/oh-my-posh/config.json`
 - Zed: `~/.config/zed/settings.json`
 - Sublime: `~/Library/Application Support/Sublime Text/Packages/User`
@@ -41,6 +43,7 @@ cd ~/dotfiles && sh install.sh
 
 - Python via `micromamba` (run `conda` alias works)
 - Sensitive local config lives in `~/git/private/dotfiles/`
+- `install.sh` links core configs, including `config/codiff/codiff.jsonc` -> `~/.codiff/codiff.jsonc`
 - `install.sh` will link private overlays when present:
 - `zsh/env.zsh` -> `~/.config/secrets/env.zsh`
 - `zsh/private.zsh` -> `~/.config/secrets/private.zsh`
@@ -55,6 +58,7 @@ cd ~/dotfiles && sh install.sh
 - `agents/prompts/` -> `~/.codex/prompts`
 - `bin/committer` -> `~/.local/bin/committer`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
+- Codiff installs from `nkzw-tech/tap/codiff`; setup also clones `https://github.com/nkzw-tech/codiff.git` to `~/git/oss/codiff` for the Codex skill target
 
 ## tmux
 
