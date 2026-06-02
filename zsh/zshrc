@@ -62,3 +62,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
 # homebrew bash
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+[[ -f "$HOME/.vite-plus/env" ]] && source "$HOME/.vite-plus/env"

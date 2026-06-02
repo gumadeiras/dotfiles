@@ -122,7 +122,6 @@ fi
 echo "[exec] running brew bundle"
 brew bundle --file="$DOTFILES_DIR/Brewfile" || echo "[warn] brew bundle failed, continuing..."
 
-echo "[exec] installing ccusage for codex"
 export PATH="$(brew --prefix)/bin:$PATH"
 export PNPM_HOME="$HOME/Library/pnpm"
 mkdir -p "$PNPM_HOME"
@@ -130,6 +129,13 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+echo "[exec] installing vite plus"
+if ! bash -o pipefail -c 'curl -fsSL https://vite.plus | bash'; then
+  echo "[warn] vite plus install failed, continuing..."
+fi
+
+echo "[exec] installing ccusage for codex"
 if command -v pnpm &> /dev/null; then
   pnpm add -g @ccusage/codex@latest || echo "[warn] ccusage install failed, continuing..."
 else
