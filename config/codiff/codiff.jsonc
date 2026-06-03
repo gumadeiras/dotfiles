@@ -7,6 +7,7 @@
     "discardComment": "Escape",
     "fileFilter": "Mod+p",
     "nextSearchMatch": "Enter",
+    "openFile": "Mod+k",
     "prevSearchMatch": "Shift+Enter",
     "submitComment": "Mod+Enter",
     "toggleSidebar": "Mod+b"
@@ -14,8 +15,9 @@
   "settings": {
     "copyCommentsOnClose": true,
     "diffStyle": "unified",
-    "lastRepositoryPath": "",
-    "openAIModel": "gpt-5.4",
+    "editorCommand": "\"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl\" \"{repo}\" \"{file}\"",
+    "lastRepositoryPath": "/Users/gumadeiras/git/oss/codiff",
+    "openAIModel": "gpt-5.3-codex-spark",
     "showOutdated": false,
     "showWhitespace": false,
     "theme": "system",
