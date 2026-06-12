@@ -19,6 +19,7 @@ cd ~/dotfiles && sh install.sh
 | **config/** | app configs (gh, ghostty, oh-my-posh, zed) |
 | **codiff** | local diff viewer app + config |
 | **private bin/** | helper scripts linked into `~/.local/bin` |
+| **mail automation** | private Apple Mail automation bootstrap hook |
 | **micromamba** | python environments (conda-compatible) |
 | **Brewfile** | homebrew packages |
 | **apps/** | karabiner, raycast, iterm, sublime, zotero |
@@ -57,8 +58,10 @@ cd ~/dotfiles && sh install.sh
 - `agents/skills/` -> `~/.codex/skills`
 - `agents/prompts/` -> `~/.codex/prompts`
 - `bin/committer` -> `~/.local/bin/committer`
+- `bin/setup-mail-automation` -> `~/.local/bin/setup-mail-automation`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
 - Codiff installs from `nkzw-tech/tap/codiff`; setup also clones `https://github.com/nkzw-tech/codiff.git` to `~/git/oss/codiff` for the Codex skill target
+- Mail automation lives in private dotfiles. After Mail accounts are configured, run `setup-mail-automation`.
 
 ## tmux
 

@@ -123,6 +123,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/AGENTS.md" "$HOME/.codex/AG
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skills"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/committer" "$HOME/.local/bin/committer"
+link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/setup-mail-automation" "$HOME/.local/bin/setup-mail-automation"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
 sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"
