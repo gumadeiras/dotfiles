@@ -6,20 +6,34 @@
     "diffSearch": "Mod+f",
     "discardComment": "Escape",
     "fileFilter": "Mod+p",
+    "nextHunk": [
+      "Ctrl+ArrowDown",
+      "j"
+    ],
     "nextSearchMatch": "Enter",
     "openFile": "Mod+k",
+    "prevHunk": [
+      "Ctrl+ArrowUp",
+      "k"
+    ],
     "prevSearchMatch": "Shift+Enter",
+    "shortcutsHelp": "Shift+?",
     "submitComment": "Mod+Enter",
-    "toggleSidebar": "Mod+b"
+    "toggleSidebar": "Mod+b",
+    "toggleWordWrap": "Alt+z"
   },
   "settings": {
+    "agentBackend": "codex",
+    "claudeModel": "claude-sonnet-4-6",
+    "codeFontFamily": "",
+    "codeFontSize": 13,
     "copyCommentsOnClose": true,
-    "diffStyle": "unified",
+    "diffStyle": "split",
     "editorCommand": "\"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl\" \"{repo}\" \"{file}\"",
-    "lastRepositoryPath": "/Users/gumadeiras/git/oss/codiff",
-    "openAIModel": "gpt-5.3-codex-spark",
+    "lastRepositoryPath": "/Users/gumadeiras/git/twopy",
+    "openAIModel": "gpt-5.5",
     "showOutdated": false,
-    "showWhitespace": false,
+    "showWhitespace": true,
     "theme": "system",
     "wordWrap": true
   }
