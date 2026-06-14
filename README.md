@@ -51,6 +51,7 @@ cd ~/dotfiles && sh install.sh
 - `git/config.private` -> `~/.config/git/config.private`
 - `git/allowed_signers` -> `~/.config/git/allowed_signers`
 - `config/gh/hosts.yml` -> `~/.config/gh/hosts.yml`
+- `config/codex/hooks.json` -> `~/.codex/hooks.json`
 - `ssh/config` -> `~/.ssh/config`
 - `apps/sublime/User/MySFTP/servers/server.json` -> `~/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json`
 - `agents/` -> `~/.agents`
@@ -59,8 +60,10 @@ cd ~/dotfiles && sh install.sh
 - `agents/prompts/` -> `~/.codex/prompts`
 - `bin/committer` -> `~/.local/bin/committer`
 - `bin/setup-mail-automation` -> `~/.local/bin/setup-mail-automation`
+- `bin/setup-codex-plugins` -> `~/.local/bin/setup-codex-plugins`
 - Open Sublime once after setup, then run `Package Control: Satisfy Dependencies` if any packages are missing
 - Codiff installs from `nkzw-tech/tap/codiff`; setup also clones `https://github.com/nkzw-tech/codiff.git` to `~/git/oss/codiff` for the Codex skill target
+- Private Codex plugins are installed during setup when `codex` is available.
 - Mail automation lives in private dotfiles. After Mail accounts are configured, run `setup-mail-automation`.
 
 ## tmux

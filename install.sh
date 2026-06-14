@@ -116,6 +116,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/zsh/private.zsh" "$HOME/.config/se
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/config.private" "$HOME/.config/git/config.private"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/git/allowed_signers" "$HOME/.config/git/allowed_signers"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/codex/hooks.json" "$HOME/.codex/hooks.json"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/ssh/config" "$HOME/.ssh/config"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/apps/sublime/User/MySFTP/servers/server.json" "$HOME/Library/Application Support/Sublime Text/Packages/User/MySFTP/servers/server.json"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents" "$HOME/.agents"
@@ -124,6 +125,7 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skill
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/committer" "$HOME/.local/bin/committer"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/setup-mail-automation" "$HOME/.local/bin/setup-mail-automation"
+link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" "$HOME/.local/bin/setup-codex-plugins"
 
 sublime_user_dir="$HOME/Library/Application Support/Sublime Text/Packages/User"
 sublime_dotfiles_dir="$DOTFILES_DIR/apps/sublime/User"
@@ -160,6 +162,13 @@ if command -v pnpm &> /dev/null; then
   pnpm add -g @ccusage/codex@latest || echo "[warn] ccusage install failed, continuing..."
 else
   echo "[warn] pnpm not found; skipping ccusage install"
+fi
+
+echo "[exec] installing private Codex plugins"
+if [[ -x "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" ]]; then
+  "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" || echo "[warn] private Codex plugin setup failed, continuing..."
+else
+  echo "[warn] private Codex plugin setup not found; skipping"
 fi
 
 echo "[exec] installing pdf-to-markdown"
