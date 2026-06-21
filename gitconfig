@@ -53,3 +53,6 @@
 [credential "https://git.yale.edu"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[user]
+	name = gumadeiras
+	email = gumadeiras@users.noreply.github.com
