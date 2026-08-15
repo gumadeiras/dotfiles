@@ -58,3 +58,6 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 
 # Vite+ bin (https://viteplus.dev)
 [[ -f "$HOME/.vite-plus/env" ]] && source "$HOME/.vite-plus/env"
+
+# Keep Pi's FFF extension from indexing the entire home directory.
+export FFF_ENABLE_HOME_SCAN=0
