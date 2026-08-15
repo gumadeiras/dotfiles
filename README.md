@@ -21,6 +21,7 @@ cd ~/dotfiles && sh install.sh
 | **private bin/** | helper scripts linked into `~/.local/bin` |
 | **mail automation** | private Apple Mail automation bootstrap hook |
 | **micromamba** | python environments (conda-compatible) |
+| **Vite+** | Node.js, package managers, and global JavaScript tools |
 | **Brewfile** | homebrew packages |
 | **apps/** | karabiner, raycast, iterm, sublime, zotero |
 
@@ -43,6 +44,8 @@ cd ~/dotfiles && sh install.sh
 ## notes
 
 - Python via `micromamba` (run `conda` alias works)
+- Node.js and JavaScript package managers via Vite+; use `vp install`, `vp run`, and `vp pm`
+- Global JavaScript tools installed by setup: `ccusage`, `pdf-to-markdown`, `qmd`, `mcporter`, and `tsc`
 - Sensitive local config lives in `~/git/private/dotfiles/`
 - `install.sh` links core configs, including `config/codiff/codiff.jsonc` -> `~/.codiff/codiff.jsonc`
 - `install.sh` will link private overlays when present:

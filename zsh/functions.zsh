@@ -149,14 +149,14 @@ ccusage() {
   local codex_cli="$HOME/git/oss/ccusage/apps/codex/dist/index.js"
 
   if [[ -x "$codex_cli" ]]; then
-    command node "$codex_cli" "$@"
+    command vp node "$codex_cli" "$@"
     return
   fi
 
-  if command -v ccusage-codex >/dev/null 2>&1; then
-    command ccusage-codex "$@"
+  if [[ -x "$HOME/.vite-plus/bin/ccusage" ]]; then
+    command "$HOME/.vite-plus/bin/ccusage" codex "$@"
     return
   fi
 
-  command npx -y @ccusage/codex@latest "$@"
+  command vp dlx ccusage@latest -- codex "$@"
 }

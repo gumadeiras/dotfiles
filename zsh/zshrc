@@ -18,14 +18,6 @@ if [[ -f "$HOME/.config/secrets/private.zsh" ]]; then
   source "$HOME/.config/secrets/private.zsh"
 fi
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
@@ -62,6 +54,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
 # homebrew bash
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 
 # Vite+ bin (https://viteplus.dev)
 [[ -f "$HOME/.vite-plus/env" ]] && source "$HOME/.vite-plus/env"

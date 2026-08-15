@@ -145,23 +145,28 @@ echo "[exec] running brew bundle"
 brew bundle --file="$DOTFILES_DIR/Brewfile" || echo "[warn] brew bundle failed, continuing..."
 
 export PATH="$(brew --prefix)/bin:$PATH"
-export PNPM_HOME="$HOME/Library/pnpm"
-mkdir -p "$PNPM_HOME"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 echo "[exec] installing vite plus"
 if ! bash -o pipefail -c 'curl -fsSL https://vite.plus | bash'; then
   echo "[warn] vite plus install failed, continuing..."
 fi
 
-echo "[exec] installing ccusage for codex"
-if command -v pnpm &> /dev/null; then
-  pnpm add -g @ccusage/codex@latest || echo "[warn] ccusage install failed, continuing..."
+if [[ -f "$HOME/.vite-plus/env" ]]; then
+  source "$HOME/.vite-plus/env"
+fi
+
+echo "[exec] configuring vite plus"
+if command -v vp &> /dev/null; then
+  vp env on || echo "[warn] vite plus managed mode setup failed, continuing..."
+  corepack enable || echo "[warn] vite plus package manager shim setup failed, continuing..."
+  vp install -g \
+    ccusage@latest \
+    @pspdfkit/pdf-to-markdown@latest \
+    @tobilu/qmd@latest \
+    mcporter@latest \
+    typescript@latest || echo "[warn] vite plus global package setup failed, continuing..."
 else
-  echo "[warn] pnpm not found; skipping ccusage install"
+  echo "[warn] vite plus not found; skipping JavaScript tool setup"
 fi
 
 echo "[exec] installing private Codex plugins"
@@ -169,13 +174,6 @@ if [[ -x "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" ]]; then
   "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" || echo "[warn] private Codex plugin setup failed, continuing..."
 else
   echo "[warn] private Codex plugin setup not found; skipping"
-fi
-
-echo "[exec] installing pdf-to-markdown"
-if command -v pnpm &> /dev/null; then
-  pnpm add -g @pspdfkit/pdf-to-markdown@latest || echo "[warn] pdf-to-markdown install failed, continuing..."
-else
-  echo "[warn] pnpm not found; skipping pdf-to-markdown install"
 fi
 
 # Install micromamba for Python environment management
