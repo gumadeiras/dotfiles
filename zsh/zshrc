@@ -37,9 +37,6 @@ export PATH="$HOME/.opencode/bin:$PATH"
 
 export PATH="$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-# OpenClaw Completion
-source "$HOME/.openclaw/completions/openclaw.zsh"
-
 # OpenClaw maintainer validation
 export OPENCLAW_TESTBOX=1
 export OPENCLAW_BUILD_PRIVATE_QA=1
