@@ -3,7 +3,7 @@ theme = Bright Lights
 window-colorspace = display-p3
 font-thicken = true
 
-macos-titlebar-style = tabs
+# macos-titlebar-style = tabs
 unfocused-split-opacity = 0.9
 
 cursor-style = block

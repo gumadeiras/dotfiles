@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nkzw-tech/codiff/main/src/config/codiff-config.schema.json",
+  "$schema": "https://raw.githubusercontent.com/nkzw-tech/codiff/main/core/config/codiff-config.schema.json",
   "keymap": {
     "closeSearch": "Escape",
     "commandBar": "Mod+Shift+p",
@@ -30,11 +30,15 @@
     "copyCommentsOnClose": true,
     "diffStyle": "unified",
     "editorCommand": "\"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl\" \"{repo}\" \"{file}\"",
-    "lastRepositoryPath": "/Users/gumadeiras/git/orgs/optogui/.worktrees/pr-51",
+    "lastRepositoryPath": "/Users/gumadeiras/Downloads/optogui",
     "openAIModel": "gpt-5.5",
+    "opencodeModel": "opencode-default",
+    "piModel": "pi-default",
+    "reviewCommentsPrefix": "# Address these Review Comments",
     "showOutdated": false,
     "showWhitespace": true,
     "theme": "system",
+    "walkthroughPrompt": "",
     "wordWrap": true
   }
 }

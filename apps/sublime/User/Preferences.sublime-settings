@@ -21,6 +21,6 @@
     "close_windows_when_empty": false,
     "native_tabs": "preferred",
     "open_files_in_new_window": "always",
-    "font_size": 13,
+    "font_size": 14,
     "word_wrap": false,
 }
