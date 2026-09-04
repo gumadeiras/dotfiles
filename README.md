@@ -47,6 +47,9 @@ cd ~/dotfiles && sh install.sh
 - Node.js and JavaScript package managers via Vite+; use `vp install`, `vp run`, and `vp pm`
 - Global JavaScript tools installed by setup: `ccusage`, `pdf-to-markdown`, `qmd`, `mcporter`, and `tsc`
 - Sensitive local config lives in `~/git/private/dotfiles/`
+- Shell environment values live in 1Password, in the `Personal` vault's `Shell Environment` item. Each field label is its exact environment variable name, including aliases, usernames, and voice IDs.
+- `~/.config/secrets/env.zsh` loads those fields into the shell through `op` and `jq`; it contains no secret values. New interactive shells need 1Password CLI access. To load updated values in an existing shell, run `source ~/.config/secrets/env.zsh`.
+- For one value, use `op read 'op://Personal/Shell Environment/FIELD_NAME'`. For commands that use references, see the [1Password environment variable guide](https://www.1password.dev/cli/secrets-environment-variables).
 - `install.sh` links core configs, including `config/codiff/codiff.jsonc` -> `~/.codiff/codiff.jsonc`
 - `install.sh` will link private overlays when present:
 - `zsh/env.zsh` -> `~/.config/secrets/env.zsh`
