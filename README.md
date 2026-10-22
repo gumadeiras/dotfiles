@@ -40,6 +40,8 @@ cd ~/dotfiles && sh install.sh
 - Oh My Posh: `~/.config/oh-my-posh/config.json`
 - Zed: `~/.config/zed/settings.json`
 - Sublime: `~/Library/Application Support/Sublime Text/Packages/User`
+- Karabiner: `~/.config/karabiner` (whole folder, because Karabiner replaces its file on save)
+- Claude Code and Codex: `~/.claude/{CLAUDE.md,settings.json,skills,commands}` and `~/.codex/{AGENTS.md,hooks.json,skills,prompts}`, linked from private dotfiles
 
 ## notes
 

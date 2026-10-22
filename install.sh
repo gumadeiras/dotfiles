@@ -83,13 +83,13 @@ brew tap homebrew/cask-fonts || true
 
 echo "[exec] linking dotfiles"
 mkdir -p ~/.zsh
-mkdir -p ~/.config/karabiner
 mkdir -p ~/.config/gh
 mkdir -p ~/.config/git
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/oh-my-posh
 mkdir -p ~/.config/secrets
 mkdir -p ~/.config/zed
+mkdir -p ~/.claude
 mkdir -p ~/.codex
 mkdir -p ~/.codiff
 mkdir -p ~/.local/bin
@@ -101,7 +101,8 @@ link_file "$DOTFILES_DIR/zsh/alias.zsh" "$HOME/.zsh/alias.zsh"
 link_file "$DOTFILES_DIR/zsh/functions.zsh" "$HOME/.zsh/functions.zsh"
 link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
-link_file "$DOTFILES_DIR/apps/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+# Karabiner replaces karabiner.json on save, so link the whole folder.
+link_file "$DOTFILES_DIR/apps/karabiner" "$HOME/.config/karabiner"
 link_file "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 link_file "$DOTFILES_DIR/config/ghostty/config" "$HOME/.config/ghostty/config"
 link_file "$DOTFILES_DIR/config/codiff/codiff.jsonc" "$HOME/.codiff/codiff.jsonc"
@@ -123,6 +124,10 @@ link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents" "$HOME/.agents"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/AGENTS.md" "$HOME/.codex/AGENTS.md"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.codex/skills"
 link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.codex/prompts"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/skills" "$HOME/.claude/skills"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/agents/prompts" "$HOME/.claude/commands"
+link_private_if_exists "$PRIVATE_DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/committer" "$HOME/.local/bin/committer"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/setup-mail-automation" "$HOME/.local/bin/setup-mail-automation"
 link_private_executable_if_exists "$PRIVATE_DOTFILES_DIR/bin/setup-codex-plugins" "$HOME/.local/bin/setup-codex-plugins"

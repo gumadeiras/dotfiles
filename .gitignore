@@ -35,3 +35,6 @@ apps/sublime/User/sftp_servers/
 !apps/sublime/User/**/*.sublime-settings
 !apps/sublime/User/**/*.sublime-theme
 !apps/sublime/User/**/*.sublime-color-scheme
+
+# Karabiner writes these next to its linked config
+apps/karabiner/automatic_backups/
