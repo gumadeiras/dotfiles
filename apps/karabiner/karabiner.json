@@ -108,7 +108,7 @@
             "simple_modifications": [
                 {
                     "from": { "pointing_button": "button4" },
-                    "to": [{ "key_code": "f16" }]
+                    "to": [{ "key_code": "caps_lock" }]
                 },
                 {
                     "from": { "pointing_button": "button5" },
